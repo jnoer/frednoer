@@ -1,0 +1,72 @@
+<div id="side">
+
+    <!--<%= render(:partial => "./fred_box") %>-->
+    <div ng-include="'fredbox.html'"></div>
+
+    <ul id="nav">
+        <li >
+            <div class="home_link">
+                <a ng-href="#/writing-editing">Writing and Editing</a>
+            </div>
+        </li>
+
+        <li>
+            <div style="margin-left:15px;" id="submenu">
+                <!--<%= link_to 'Writing', :controller => 'writing', :action => 'writing'%>-->
+                <!--<% if controller.action_name == "writing" or controller.action_name == "brochures" or controller.action_name == "company_profiles" or controller.action_name == "feature_articles" or controller.action_name == "news_articles" or controller.action_name == "news_releases"-%>-->
+                <!--<img src="/images/square.jpg" class="square" />-->
+                <!--<% end %>                        <br>-->
+
+                <ul>
+                    <li><a ng-href="#/writing">Writing</a></li>
+
+                    <!--<%= link_to 'Editing', :controller => 'writing', :action => 'editing' -%>-->
+                    <!--<% if controller.action_name == "editing" -%>-->
+                    <!--<img src="/images/square.jpg" class="square" />-->
+                    <!--<% end %> <br>-->
+
+                    <li><a ng-href="#/editing">Editing</a> </li>
+                    <li><a ng-href="#/copyediting">Copyediting</a> </li>
+                    <li><a ng-href="#/proofreading">Proofreading</a> </li>
+                    <li><a ng-href="#/drag_racing">Drag Racing</a> </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            <a ng-href="#/photography">Photography</a>
+        </li>
+
+        <li>
+            <div style="margin-left:10px;" class="submenu">
+                <ul>
+                    <li><a ng-href="#/galleries">Galleries</a> </li>
+                    <li><a ng-href="#/ordering">Ordering</a> </li>
+                    <li><a ng-href="#/commissions">Commissions</a> </li>
+                    <li><a ng-href="#/licensing">Licensing</a> </li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            <a ng-href="#/about">About Fred Noer</a>
+        </li>
+
+        <li>
+            <!--<%= link_to 'Contact', :controller => 'main', :action => 'contact' %>-->
+            <a ng-href="#/contact">Contact</a>
+        </li>
+
+        <li>
+            <!--<%= link_to 'Copyright', :controller => 'main', :action => 'copyright' %>-->
+            <a ng-href="#/copyright">Copyright</a>
+        </li>
+    </ul>
+
+    <br>
+    <br>
+    <!--<% if controller.action_name == 'index' %>-->
+    <!--<%=render(:partial => "./mission") %>-->
+    <!--<% end %>-->
+
+</div>

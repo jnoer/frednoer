@@ -1,0 +1,38 @@
+/* Styles for order form */
+
+.checkout_form fieldset {
+  
+}
+
+.checkout_form legend {
+  font-style: sans-serif;
+  padding: 0.2em 1em;
+  font-family: verdana; 
+  font-size: 18;
+}
+
+.checkout_form label {
+  width: 5em;
+  float: left;
+  text-align: right;
+  margin-right: 0.5em;
+  display: block;
+  font-family: verdana; 
+  font-size: 12;
+}
+
+.checkout_form .submit {
+  float:right;
+}
+
+#confirm_table {
+  margin-right:auto;
+  margin-left:auto;
+}
+
+#confirm_table td {
+
+  background-color: #666666;
+  padding: 3px; 
+
+}

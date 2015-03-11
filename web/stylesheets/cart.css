@@ -1,0 +1,74 @@
+#cart_div {
+  /*border: 1px solid white; */
+  /*float: right;*/
+  /*float: left;*/
+  margin-top:0em;
+  /*padding-top: 1em;*/
+  /*padding-left: 1em;*/
+  /*padding-bottom: 1em; */
+  width: 150px;
+  display:block;
+  background-color:white;
+  /*margin-bottom:auto;*/
+}
+
+#cart .cart-title {
+    font-weight:bold;
+    text-align:center;
+    color:white;
+    font-size:14px;
+  font-family: sans-serif;
+  background-color:brown;
+}
+
+.item-price, .total-line {
+  text-align: right;
+  font-family: sans-serif;	
+}
+
+.total-line .total-cell {
+  font-weight: bold;
+  border-top: 1px solid #0066FF;
+  font-family: sans-serif;
+}
+
+#cart {
+  border: 1px solid black;
+}
+
+#cart, #cart table {
+  font-size: 4px;	
+
+  font-family: sans-serif;
+}
+
+#cart table {
+
+  border-top:    1px dotted #0066FF;
+  border-bottom: 1px dotted #0066FF;
+  margin-bottom: 10px;
+  margin-top:5px;
+  /*width:11.75em;*/
+  margin-right:auto;
+  margin-left:auto;
+  background-color: white;
+}
+
+#cart table tr {
+  font-weight:bold;
+  font-size:11px;
+  background-color: white;
+  color:     black;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.cart_submit, .button-to {
+	margin-left:5px;	
+	height:20px;
+	font-size:8px;
+	font-weight:bold;
+}
+
+
+/* END:cart */

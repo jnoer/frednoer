@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML>
+<HEAD>
+    <title>Fred Noer / Image Source</title>
+
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+    <meta name="author" content="Jason Noer">
+    <meta name="keywords" content="Fred Noer, Photography">
+    <meta name="description" content="Lake Geneva area photographer and writer fred noer offers photograpy, writing, and editing services.  Image Source.">
+    <meta name="robots" content="index, follow, noarchive">
+    <meta name="googlebot" content="noarchive">
+
+    <link rel="stylesheet" href="../stylesheets/global.css">
+    <!--<script src="../javascript/libs/angualr.min.js"></script>-->
+
+    <script src="javascript/libs/angular.min.js"></script>
+    <script src="javascript/libs/angular-route.min.js"></script>
+    <script src="javascript/app.js"></script>
+
+
+    <!--<SCRIPT LANGUAGE="JavaScript">-->
+        <!--var aryImages = new Array(3);-->
+
+        <!--aryImages[0] = "images/_main/cyi.jpg";-->
+        <!--aryImages[1] = "images/_main/tree.jpg";-->
+        <!--aryImages[2] = "images/_main/aab.jpg";-->
+
+        <!--for (i=0; i < aryImages.length; i++)-->
+        <!--{-->
+            <!--var preload = new Image();-->
+            <!--preload.src = aryImages[i];-->
+        <!--}-->
+
+    <!--</script>-->
+
+</HEAD>
+
+<!--<body onload="appear();">-->
+<body>
+
+<div ng-app="frednoer" ng-controller="mainController">
+
+    <div ng-include="'home.html'" ng-show="location.path() === ''">
+        <div ></div>
+    </div>
+
+    <div ng-show="location.path() !== ''">
+        <div ng-view class="main"></div>
+        <div ng-include="'nav.html'"></div>
+
+    </div>
+</div>
+
+
+
+
+</body>
+</HTML>

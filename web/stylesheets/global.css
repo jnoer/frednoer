@@ -1,0 +1,198 @@
+body {
+    font-family:Verdana, sans-serif;
+	width:753px;
+	margin-right:auto;margin-left:auto;
+	position: relative;
+}
+
+H2 {font-size:20pt;
+	font-weight:bold;
+	font-family:Rockwell, Verdana, sans-serif;
+	line-height:120%;
+	margin-top:0;}
+	
+H3 {line-height:120%;}
+
+p {line-height:1.4em;}
+
+ul
+{
+    line-height: 2em;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+
+/* LINKS */
+
+a {font-family: Verdana, sans-serif; color:#555555; font-size: 10pt; font-weight:bold}
+a:link {text-decoration: none;}
+a:visited {text-decoration: none; }
+a:active {text-decoration: none; }
+a:hover {color:black;}
+
+.home_link a {font-family: arial, tahoma, 'arial black'; color:brown; font-size: 14px; font-weight:bold}
+.home_link a:link {text-decoration: none;}
+.home_link a:visited {text-decoration: none;}
+.home_link a:active {text-decoration: none; }
+.home_link a:hover {color:black;}
+
+#notice {
+  border: 2px solid green;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+
+/* SIDE */
+
+#side {position: absolute;top: 0;left: 10px;}
+
+#nav {
+  font-size:10pt;
+  /*line-height:1.6em;*/
+  padding-top:12px;
+  width: 150px; 
+  margin-left:7px
+}
+
+.fredbox {
+	background-image: url(../images/grade.JPG);
+	background-repeat:no-repeat;
+	font:small-caps 10pt Verdana;
+	font-size:14px; 
+	font-weight:bold; 
+	width:138px;
+	height:10%;
+	color:black;
+	cursor:pointer; 
+	border:solid black 1px; 
+	padding:6px; 
+	text-align:center; 
+	letter-spacing:2px;
+	overflow:hidden;
+	background-color:rgb(75%,75%,75%);
+}
+
+.mission {
+	line-height: 140%;
+	width:138px;
+	font-size:10pt; 
+	border:solid black 1px; 
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:5px;
+	padding-left:5px;
+	background-color:#EEEEEE
+}
+
+.pointer {font-size:16px;font-weight:bold;}
+
+
+/* MAIN */
+
+.main {
+  font-size:80%;
+  width:560px;
+  padding-top: 5px;
+  margin-left:180px;
+  min-height:700px;
+}
+
+.main table {font-size:10pt;}
+
+#title {
+   
+    margin-left: auto; 
+    margin-right: auto; 
+    font:small-caps 36px/36px 'Times New Roman', serif; 
+    font-weight:bold; 
+    text-align:center; 
+    letter-spacing:4px; 
+    color:brown; 
+    letter-spacing:9px;
+}
+
+/*.email  {font-family: Verdana, sans-serif; color:#555555; font-size: 10pt; font-weight:normal} */
+.email  {font-family: Verdana, sans-serif; color:black; font-size: 10pt; font-weight:normal}
+
+.contact_info .email {font-size: 10px}
+
+#banner {
+  text-align: center;
+  background-color:#EFEFEF;
+  width: 740px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  font: small-caps 60px/60px "Times New Roman", serif;
+  font-weight:bold;
+  letter-spacing:8px;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.first_letter {
+    float:left;
+    margin-right: 2px;
+    font-size:2.8em; 
+    font-weight:bold; 
+    font-family:Verdana; 
+	margin-bottom:0;
+	line-height: .8em;
+	margin-top:2px;
+}
+
+.dropcap:first-letter{
+	line-height:1em;
+	float:left;
+	font-size:2.8em; 
+    font-weight:bold; 
+	margin-bottom:0;
+	margin-top:5px;
+	/*display:none;*/
+}
+
+
+/* TABLE */
+
+.table {text-align:center;}
+
+.table th {font-weight:normal;font-style:italic;}
+
+
+/* FOOTER */
+
+.bottom_nav {text-align:center;	line-height:130%;}
+
+.contact_info {text-align:center; font-size: 10px;line-height:1.6em;}
+
+.current_link_footer
+{
+    font-family:tahoma; 
+    font-weight:bold; 
+    font-size:14px; 
+    color:brown;
+}
+
+
+/* IMAGES */
+
+.square {margin-bottom:1px;	height:6px;width:6px;}
+
+.img_upper_right
+{
+    float:right;
+    margin-left:10px;
+    margin-bottom:10px;
+    margin-top:5px;
+}
+
+.img_upper_left
+{
+    float:left;
+    margin-right:10px;
+    margin-bottom:10px;
+    margin-top:5px;
+}
+
