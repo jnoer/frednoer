@@ -9,20 +9,15 @@
 	<div id="gallery">
 		
 		<table id="gallery_table" align="center" style="text-align:center;">
-		   <tr>
-		        <!--<% @galleries.each do |gallery| %>-->
-		            <!--<td style="padding-left:35px; padding-right:35px; padding-bottom:20px; padding-top:20px; text-align:center;">       -->
-		                <!--<span class="title">-->
-		                		<!--<b><%=gallery.name%></b>-->
-						<!--</span>-->
-						<!---->
-		                <!--<%=link_to(image_tag(gallery.product.image.public_filename("thumb")), :action => 'gallery', :id => gallery.name)%>-->
-		            <!--</td>-->
-		        <!---->
-		           <!--<%= @counter.end_tr %>-->
-		         <!---->
-		        <!--<% end %>-->
-		    </tr>
+		   <div ng-repeat="gallery in galleries" style="display: inline-block; width:200px; padding-left:35px; padding-right:35px; padding-bottom:20px; padding-top:20px; text-align:center;">
+			   <div class="title">
+					<b>{{gallery.name}}</b>
+			   </div>
+
+			   <a ng-href="#/gallery/{{gallery.name}}">
+				   <img ng-src="images/{{gallery.photo}}" />
+			   </a>
+		   </div>
 		</table>
 	
 	</div>

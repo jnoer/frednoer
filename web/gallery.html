@@ -1,0 +1,17 @@
+<H2>{{galleryName}} Gallery</H2>
+
+<div id="gallery" style="text-align:center;">
+
+    <div ng-repeat="photo in photos" style="text-align:center; width:175px; float:left; padding-bottom:40px; padding-left:35px; padding-right:35px;">
+        <a ng-href="#/photo/{{photo.filename}}">
+            <img ng-src="images/{{getThumb(photo)}}" />
+        </a>
+        <br>
+
+        <span class="title" style="font-weight:bold; font-size:12px">{{photo.title}}</span>
+    </div>
+
+    <br style="clear: both;" />
+    <a style="clear: both;" align="center" href="#/gallery/{{galleryName}}/#top">Back to top</a>
+
+</div>

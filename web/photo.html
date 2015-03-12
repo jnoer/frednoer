@@ -1,0 +1,102 @@
+<div class="gallery">
+
+    <div class="photo" >
+
+        <!--<%= image_tag(@product.image.public_filename) %>-->
+        <img ng-src="images/{{photo.filename}}" />
+
+        <span style="line-height:30%"> <br><br></span>
+
+        <table align="center" border=0 width="500px">
+            <tr>
+                <td style="width:100px;text-align:left">
+                    <!--<% if @product.get_previous %>-->
+                    <!--<%=link_to('&#171; Previous', {:action => 'photo', :id => @product.get_previous},{:class=>'prev_next'})%>-->
+                    <!--<% end %>-->
+                </td>
+
+                <td style="font-size:10pt; width:300px; text-align:center;">
+                    <!--<b><%= @product.title %></b><br>-->
+                    <b>{{photo.title}}</b><br>
+                </td>
+
+                <td style="width:100;text-align:right">
+                    <!--<% if @product.get_next %>-->
+
+                    <!--<%=link_to('Next &#187;', {:action => 'photo', :id => @product.get_next}, {:class=>'prev_next'})%>-->
+                    <!--<% end %>-->
+                </td>
+            </tr>
+        </table>
+        <br style="line-height:40%">
+        <!--<%= @product.description %>-->
+        {{photo.description}}
+
+        <br>
+
+        <!--<%= if @product.date_taken == nil then '' else @product.date_taken.strftime("%B %e, %Y") end %>-->
+        {{photo.dateTaken}}
+
+        <br><br>
+
+        <div>
+            <!--<%= link_to "&#171; Back to the " + @product.gallery.name + " gallery", :action => "gallery", :id => @cookies[:page] %>-->
+            <br><br>
+            <!--<%= link_to "Order Form", :action => "order_form" %>-->
+        </div>
+
+        <br>
+
+        <br>
+
+        <!--<div id="pricing">-->
+
+            <!--<br>-->
+            <!--<b>Pricing - Fiber Photographs</b>-->
+
+            <!--<table align="center" border=0 cellspacing=0 style="font-size:10px; width:300px; text-align:center;">-->
+                <!--<tr>-->
+                    <!--<th>Size</th>-->
+                    <!--<th>Photo only</th>-->
+                    <!--<th>Matted</th>-->
+                    <!--<th>Framed</th>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>4x5</td>-->
+                    <!--<td>$65</td>-->
+                    <!--<td>$100</td>-->
+                    <!--<td>$135</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>5x7</td>-->
+                    <!--<td>$75</td>-->
+                    <!--<td>$115</td>-->
+                    <!--<td>$175</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>8x10</td>-->
+                    <!--<td>$85</td>-->
+                    <!--<td>$140</td>-->
+                    <!--<td>$215</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>11x14</td>-->
+                    <!--<td>$115</td>-->
+                    <!--<td>$185</td>-->
+                    <!--<td>$295</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>16x20</td>-->
+                    <!--<td>$165</td>-->
+                    <!--<td>$250</td>-->
+                    <!--<td>$395</td>-->
+                <!--</tr>-->
+            <!--</table>-->
+
+            <!--<br>-->
+        <!--</div>-->
+
+        </table>
+    </div>
+
+</div>
