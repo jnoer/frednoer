@@ -52,44 +52,60 @@ appModule.config(['$routeProvider', function ($routeProvider) {
     //});
 }]);
 
+appModule.service('photosService', ['$http', '$q', function($http, $q) {
+    var photos = [];
+
+    this.getPhotos = function() {
+        var resultDeferred = $q.defer();
+        var resultPromise = resultDeferred.promise;
+
+        if (photos.length === 0) {
+            var httpPromise = $http.get('photos.json');
+            httpPromise.then(
+                function gotData(data) {
+                    photos = data.data;
+                    resultDeferred.resolve(photos);
+                });
+        }
+        else {
+            resultDeferred.resolve(photos);
+        }
+
+        return resultPromise;
+    };
+}]);
+
+
 appModule.controller('mainController', ['$scope', '$location', function ($scope, $location) {
     $scope.location = $location;
 }]);
 
-//appModule.controller('galleriesCtrl', ['$scope', '$location', '$http', function ($scope, $location, $http) {
 appModule.controller('galleriesCtrl', ['$scope', '$http', function ($scope, $http) {
     $http.get('galleries.json').success(function(data) {
        $scope.galleries = data;
     });
 }]);
 
-appModule.controller('galleryCtrl', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
+appModule.controller('galleryCtrl', ['$scope', '$routeParams', 'photosService', function ($scope, $routeParams, photosService) {
     $scope.galleryName = $routeParams.galleryName;
 
     $scope.getThumb = function(photo) {
         return photo.filename.replace('.JPG', '_thumb.JPG');
     };
 
-    $http.get('photos.json').success(function(data) {
-        $scope.photos = data.filter(function(item){
+    photosService.getPhotos().then(function(photos) {
+        $scope.photos = photos.filter(function(item){
             return item.gallery === $routeParams.galleryName;
         });
     });
 }]);
 
-appModule.controller('photoCtrl', ['$scope', '$routeParams', '$http', function ($scope, $routeParams, $http) {
-    //console.log('route: ' + $routeParams.filename);
-
-    $http.get('photos.json').success(function(data) {
-        $scope.photo = data.filter(function(item) {
-            //console.log(item.filename);
+appModule.controller('photoCtrl', ['$scope', '$routeParams', 'photosService', function ($scope, $routeParams, photosService) {
+    photosService.getPhotos().then(function(photos) {
+        $scope.photo = photos.filter(function(item) {
             return item.filename === $routeParams.filename;
         })[0];
     });
-
-    console.log($scope.photo);
-
-    //$scope.photo = $routeParams.fileName;
 }]);
 
 
