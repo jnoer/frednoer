@@ -53,12 +53,16 @@
 		<p>
 		In addition to writing, Fred served 13 years as the editor of a weekly newspaper and a weekly general-interest publication. He also has edited a lifestyle magazine, a real estate firm's promotional publication, a monthly drag racing newspaper, and a community publication advocating construction of a racetrack. 
 		He also is skilled at 
-		<%= link_to 'copyediting', :controller => 'writing', :action => 'copyediting'%>, 
-		<%= link_to 'proofreading', :controller => 'writing', :action => 'proofreading'%>, and
-		<%= link_to 'photography', :controller => 'photography', :action => 'index'%>. 
+		<!--<%= link_to 'copyediting', :controller => 'writing', :action => 'copyediting'%>, -->
+		<!--<%= link_to 'proofreading', :controller => 'writing', :action => 'proofreading'%>, and-->
+		<!--<%= link_to 'photography', :controller => 'photography', :action => 'index'%>.-->
+
+			<a ng-href="#/copyediting">copyediting</a>,
+			<a ng-href="#/proofreading">proofreading</a>, and
+			<a ng-href="#/photography">photography</a>
 		</p>
 		
-		<p>How may Fred serve you? Call him at 262-661-4538, or e-mail him at <%= link_to 'fred@frednoer.com', :controller => 'main', :action => 'contact'%>.
+		<p>How may Fred serve you? Call him at {{info.phone}}, or e-mail him at <%= link_to 'fred@frednoer.com', :controller => 'main', :action => 'contact'%>.
 		</p>
 	    
 	</div>

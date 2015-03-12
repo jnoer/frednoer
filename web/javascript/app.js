@@ -1,27 +1,64 @@
 var appModule = angular.module('frednoer', ['ngRoute']);
 
 
-appModule.constant('PHONE', '262-661-4538');
+appModule.constant('INFO', {phone: '262-661-4538', email: 'fred@frednoer.com'});
 
 appModule.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/writing-editing', {
-            templateUrl: 'writing-editing.html'
+            templateUrl: 'writing-editing.html',
+            controller : 'genericCtrl'
         })
         .when('/writing', {
-            templateUrl: 'writing.html' //,
-            //controller: 'ListCtrl',
-            //resolve: {  // Inject this dependency into the controller.
-            //    items: function (itemDao) {
-            //        return itemDao.getAll();
-            //    }
-            //}
+            templateUrl: 'writing.html',
+            controller : 'genericCtrl'
+        })
+        .when('/editing', {
+            templateUrl: 'editing.html',
+            controller : 'genericCtrl'
+        })
+        .when('/commissions', {
+            templateUrl: 'commissions.html',
+            controller : 'genericCtrl'
+        })
+        .when('/licensing', {
+            templateUrl: 'licensing.html',
+            controller : 'genericCtrl'
+        })
+        .when('/about', {
+            templateUrl: 'about.html'
+        })
+        .when('/contact', {
+            templateUrl: 'contact.html',
+            controller : 'genericCtrl'
+        })
+        .when('/copyright', {
+            templateUrl: 'copyright.html',
+            controller : 'genericCtrl'
+        })
+        .when('/ordering', {
+            templateUrl: 'ordering.html',
+            controller : 'genericCtrl'
         })
         .when('/writing/brochures', {
             templateUrl: 'brochures.html'
         })
         .when('/writing/company-profiles', {
             templateUrl: 'company-profiles.html'
+        })
+        .when('/copyediting', {
+            templateUrl: 'copyediting.html',
+            controller : 'genericCtrl'
+        })
+        .when('/proofreading', {
+            templateUrl: 'proofreading.html',
+            controller : 'genericCtrl'
+        })
+        .when('/drag-racing', {
+            templateUrl: 'drag-racing.html'
+        })
+        .when('/sample-drag-racing', {
+            templateUrl: 'sample-drag-racing.html'
         })
         .when('/writing/feature-articles', {
             templateUrl: 'feature-articles.html'
@@ -33,7 +70,8 @@ appModule.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'news-releases.html'
         })
         .when('/photography', {
-            templateUrl: 'photography.html'
+            templateUrl: 'photography.html',
+            controller: 'genericCtrl'
         })
         .when('/galleries', {
             templateUrl: 'galleries.html',
@@ -106,6 +144,10 @@ appModule.controller('photoCtrl', ['$scope', '$routeParams', 'photosService', fu
             return item.filename === $routeParams.filename;
         })[0];
     });
+}]);
+
+appModule.controller('genericCtrl', ['$scope', 'INFO', function ($scope, INFO) {
+    $scope.info = INFO;
 }]);
 
 

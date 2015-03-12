@@ -1,0 +1,33 @@
+<div id="main">
+	
+<div style="margin-left:auto; margin-right:auto;width:350px;">
+<div style="text-align:left">
+<H2>Making Contact</H2>
+To reach Fred Noer:<br><br>
+
+{{info.phone}}<br><br>
+
+fred@frednoer.com<br><br>
+
+Image Source<br>
+Post Office Box 334<br>
+Burlington, Wisconsin 53105-0334<br><br><br>
+
+
+<b>Send Fred an e-mail</b><br><br> 
+<% form_for :message, :url => { :action => 'send_message' } do |form| %>
+	Enter your e-mail address <br>
+	<%= form.text_field :email %>
+
+	<br>
+	<br>
+	
+    Enter your message <br> 
+    <%= form.text_area :text %>
+    <br>
+    <%= submit_tag :Send %>
+<% end %>
+</div>
+</div>
+</div>
+<br>
