@@ -172,7 +172,11 @@ appModule.controller('photoCtrl', ['$scope', '$routeParams', 'photosService', fu
     };
 
     $scope.getDate = function(photo) {
-        return new Date(photo.dateTaken);
+        if(photo.dateTaken) {
+            return new Date(photo.dateTaken);
+        }
+
+        return '';
     };
 
     getPhotoForFilename = function(filename) {

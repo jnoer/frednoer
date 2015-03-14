@@ -92,8 +92,8 @@ a:hover {color:black;}
 	border:solid black 1px; 
 	padding-top:10px;
 	padding-bottom:10px;
-	padding-right:5px;
-	padding-left:5px;
+	padding-right:0px;
+	padding-left:6px;
 	background-color:#EEEEEE
 }
 
