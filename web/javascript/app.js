@@ -34,7 +34,7 @@ appModule.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/contact', {
             templateUrl: 'contact.html',
-            controller : 'genericCtrl'
+            controller : 'contactCtrl'
         })
         .when('/copyright', {
             templateUrl: 'copyright.html',
@@ -199,6 +199,14 @@ appModule.controller('photoCtrl', ['$scope', '$routeParams', 'photosService', fu
 
 appModule.controller('genericCtrl', ['$scope', 'INFO', function ($scope, INFO) {
     $scope.info = INFO;
+}]);
+
+appModule.controller('contactCtrl', ['$scope', 'INFO', function ($scope, INFO) {
+    $scope.info = INFO;
+
+    $scope.sendEmail = function(email) {
+
+    };
 }]);
 
 appModule.controller('navCtrl', ['$scope', '$location', function ($scope, $location) {

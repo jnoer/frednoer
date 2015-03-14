@@ -15,32 +15,15 @@
 
     <script src="javascript/libs/angular.min.js"></script>
     <script src="javascript/libs/angular-route.min.js"></script>
+    <script src="javascript/libs/mailgun.js"></script>
     <script src="javascript/app.js"></script>
-
-
-    <!--<SCRIPT LANGUAGE="JavaScript">-->
-        <!--var aryImages = new Array(3);-->
-
-        <!--aryImages[0] = "images/_main/cyi.jpg";-->
-        <!--aryImages[1] = "images/_main/tree.jpg";-->
-        <!--aryImages[2] = "images/_main/aab.jpg";-->
-
-        <!--for (i=0; i < aryImages.length; i++)-->
-        <!--{-->
-            <!--var preload = new Image();-->
-            <!--preload.src = aryImages[i];-->
-        <!--}-->
-
-    <!--</script>-->
-
 </HEAD>
 
-<!--<body onload="appear();">-->
 <body>
 
 <div ng-app="frednoer" ng-controller="mainController">
 
-    <div ng-include="'home.html'" ng-show="location.path() === ''">
+    <div ng-include="'home.html'" controller="home" ng-show="location.path() === ''">
         <div ></div>
     </div>
 
