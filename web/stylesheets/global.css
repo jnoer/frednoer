@@ -101,7 +101,7 @@ a:hover {color:black;}
 
 .square
 {
-    background-image: url("../images/_main/square.JPG");
+    background-image: url("/images/_main/square.JPG");
     display: inline-block;
 }
 
@@ -112,7 +112,7 @@ a:hover {color:black;}
   font-size:80%;
   width:560px;
   padding-top: 5px;
-  margin-left:180px;
+  margin-left:190px;
   /*min-height:700px;*/
 }
 
