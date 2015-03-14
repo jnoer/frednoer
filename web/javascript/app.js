@@ -11,23 +11,23 @@ appModule.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/writing-editing', {
             templateUrl: 'writing-editing.html',
-            controller : 'genericCtrl'
+            controller : 'generalCtrl'
         })
         .when('/writing', {
             templateUrl: 'writing.html',
-            controller : 'genericCtrl'
+            controller : 'generalCtrl'
         })
         .when('/editing', {
             templateUrl: 'editing.html',
-            controller : 'genericCtrl'
+            controller : 'generalCtrl'
         })
         .when('/commissions', {
             templateUrl: 'commissions.html',
-            controller : 'genericCtrl'
+            controller : 'generalCtrl'
         })
         .when('/licensing', {
             templateUrl: 'licensing.html',
-            controller : 'genericCtrl'
+            controller : 'generalCtrl'
         })
         .when('/about', {
             templateUrl: 'about.html'
@@ -38,11 +38,11 @@ appModule.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/copyright', {
             templateUrl: 'copyright.html',
-            controller : 'genericCtrl'
+            controller : 'generalCtrl'
         })
         .when('/ordering', {
             templateUrl: 'ordering.html',
-            controller : 'genericCtrl'
+            controller : 'generalCtrl'
         })
         .when('/writing/brochures', {
             templateUrl: 'brochures.html'
@@ -52,11 +52,11 @@ appModule.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/copyediting', {
             templateUrl: 'copyediting.html',
-            controller : 'genericCtrl'
+            controller : 'generalCtrl'
         })
         .when('/proofreading', {
             templateUrl: 'proofreading.html',
-            controller : 'genericCtrl'
+            controller : 'generalCtrl'
         })
         .when('/drag-racing', {
             templateUrl: 'drag-racing.html'
@@ -75,7 +75,7 @@ appModule.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/photography', {
             templateUrl: 'photography.html',
-            controller: 'genericCtrl'
+            controller: 'generalCtrl'
         })
         .when('/galleries', {
             templateUrl: 'galleries.html',
@@ -91,7 +91,7 @@ appModule.config(['$routeProvider', function ($routeProvider) {
         })
         .otherwise({
             templateUrl: 'writing-editing.html',
-            controller : 'genericCtrl'
+            controller : 'generalCtrl'
         });
 }]);
 
@@ -201,7 +201,7 @@ appModule.controller('photoCtrl', ['$scope', '$routeParams', 'photosService', fu
     };
 }]);
 
-appModule.controller('genericCtrl', ['$scope', 'INFO', function ($scope, INFO) {
+appModule.controller('generalCtrl', ['$scope', 'INFO', function ($scope, INFO) {
     $scope.info = INFO;
 }]);
 
@@ -221,16 +221,26 @@ appModule.controller('navCtrl', ['$scope', '$location', function ($scope, $locat
     };
 
     $scope.isCurrentPath = function(path) {
-        return $location.path().indexOf(path) > -1;
+        //return $location.path().indexOf(path) > -1;
+        return $location.path().endsWith(path);
     };
 
     $scope.isWritingEditingPath = function() {
         return $location.path().endsWith('/writing-editing') ||
-            $location.path().indexOf('/writing') > -1 ||
             $location.path().endsWith('/editing') ||
             $location.path().endsWith('/copyediting') ||
             $location.path().endsWith('/proofreading') ||
-            $location.path().endsWith('/drag-racing')
+            $location.path().endsWith('/drag-racing') ||
+            $scope.isWritingPath();
+    };
+
+    $scope.isWritingPath = function() {
+        return $location.path().endsWith('/writing') ||
+            $location.path().endsWith('/brochures') ||
+            $location.path().endsWith('/company-profiles') ||
+            $location.path().endsWith('/feature-articles') ||
+            $location.path().endsWith('/news-articles') ||
+            $location.path().endsWith('/news-releases');
     };
 
     $scope.isPhotographyPath = function() {
@@ -240,13 +250,13 @@ appModule.controller('navCtrl', ['$scope', '$location', function ($scope, $locat
             $location.path().endsWith('/commissions') ||
             $location.path().endsWith('/licensing') ||
             $location.path().indexOf('/gallery/') > -1 ||
-            $location.path().indexOf('/photo/') > -1
+            $location.path().indexOf('/photo/') > -1;
     };
 
     $scope.isGalleryPath = function() {
         return $location.path().endsWith('/galleries') ||
             $location.path().indexOf('/gallery/') > -1 ||
-            $location.path().indexOf('/photo/') > -1
+            $location.path().indexOf('/photo/') > -1;
     };
 }]);
 
