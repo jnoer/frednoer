@@ -221,12 +221,12 @@ appModule.controller('navCtrl', ['$scope', '$location', function ($scope, $locat
     };
 
     $scope.isCurrentPath = function(path) {
-        return $location.path().endsWith(path);
+        return $location.path().indexOf(path) > -1;
     };
 
     $scope.isWritingEditingPath = function() {
         return $location.path().endsWith('/writing-editing') ||
-            $location.path().endsWith('/writing') ||
+            $location.path().indexOf('/writing') > -1 ||
             $location.path().endsWith('/editing') ||
             $location.path().endsWith('/copyediting') ||
             $location.path().endsWith('/proofreading') ||
