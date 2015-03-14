@@ -1,72 +1,81 @@
-<div id="side">
+<div id="side" ng-controller="navCtrl">
 
-    <!--<%= render(:partial => "./fred_box") %>-->
     <div ng-include="'fredbox.html'"></div>
 
     <ul id="nav">
-        <li >
-            <div class="home_link">
-                <a ng-href="#/writing-editing">Writing and Editing</a>
-            </div>
+        <li ng-class="{home_link: isWritingEditingPath()}">
+            <a ng-href="#/writing-editing">Writing and Editing</a>
         </li>
 
         <li>
-            <div style="margin-left:15px;" id="submenu">
-                <!--<%= link_to 'Writing', :controller => 'writing', :action => 'writing'%>-->
-                <!--<% if controller.action_name == "writing" or controller.action_name == "brochures" or controller.action_name == "company_profiles" or controller.action_name == "feature_articles" or controller.action_name == "news_articles" or controller.action_name == "news_releases"-%>-->
-                <!--<img src="/images/square.jpg" class="square" />-->
-                <!--<% end %>                        <br>-->
-
+            <div ng-show="isWritingEditingPath()" style="margin-left:15px;" id="submenu">
                 <ul>
-                    <li><a ng-href="#/writing">Writing</a></li>
-
-                    <!--<%= link_to 'Editing', :controller => 'writing', :action => 'editing' -%>-->
-                    <!--<% if controller.action_name == "editing" -%>-->
-                    <!--<img src="/images/square.jpg" class="square" />-->
-                    <!--<% end %> <br>-->
-
-                    <li><a ng-href="#/editing">Editing</a> </li>
-                    <li><a ng-href="#/copyediting">Copyediting</a> </li>
-                    <li><a ng-href="#/proofreading">Proofreading</a> </li>
-                    <li><a ng-href="#/drag-racing">Drag Racing</a> </li>
+                    <li>
+                        <a ng-href="#/writing">Writing</a>
+                        <div ng-class="{square: isCurrentPath('/writing')}"></div>
+                    </li>
+                    <li>
+                        <a ng-href="#/editing">Editing</a>
+                        <div ng-class="{square: isCurrentPath('/editing')}"></div>
+                    </li>
+                    <li>
+                        <a ng-href="#/copyediting">Copyediting</a>
+                        <div ng-class="{square: isCurrentPath('/copyediting')}"></div>
+                    </li>
+                    <li>
+                        <a ng-href="#/proofreading">Proofreading</a>
+                        <div ng-class="{square: isCurrentPath('/proofreading')}"></div>
+                    </li>
+                    <li>
+                        <a ng-href="#/drag-racing">Drag Racing</a>
+                        <div ng-class="{square: isCurrentPath('/drag-racing')}"></div>
+                    </li>
                 </ul>
             </div>
         </li>
 
-        <li>
+        <li ng-class="{home_link: isPhotographyPath()}">
             <a ng-href="#/photography">Photography</a>
         </li>
 
         <li>
-            <div style="margin-left:10px;" class="submenu">
+            <div ng-show="isPhotographyPath()" style="margin-left:10px;" class="submenu">
                 <ul>
-                    <li><a ng-href="#/galleries">Galleries</a> </li>
-                    <li><a ng-href="#/ordering">Ordering</a> </li>
-                    <li><a ng-href="#/commissions">Commissions</a> </li>
-                    <li><a ng-href="#/licensing">Licensing</a> </li>
+                    <li>
+                        <a ng-href="#/galleries">Galleries</a>
+                        <div ng-class="{square: isGalleryPath()}"></div>
+                    </li>
+                    <li>
+                        <a ng-href="#/ordering">Ordering</a>
+                        <div ng-class="{square: isCurrentPath('/ordering')}"></div>
+                    </li>
+                    <li>
+                        <a ng-href="#/commissions">Commissions</a>
+                        <div ng-class="{square: isCurrentPath('/commissions')}"></div>
+                    </li>
+                    <li>
+                        <a ng-href="#/licensing">Licensing</a>
+                        <div ng-class="{square: isCurrentPath('/licensing')}"></div>
+                    </li>
                 </ul>
             </div>
         </li>
 
-        <li>
+        <li ng-class="{home_link: isCurrentPath('/about')}">
             <a ng-href="#/about">About Fred Noer</a>
         </li>
 
-        <li>
-            <!--<%= link_to 'Contact', :controller => 'main', :action => 'contact' %>-->
+        <li ng-class="{home_link: isCurrentPath('/contact')}">
             <a ng-href="#/contact">Contact</a>
         </li>
 
-        <li>
-            <!--<%= link_to 'Copyright', :controller => 'main', :action => 'copyright' %>-->
+        <li ng-class="{home_link: isCurrentPath('/copyright')}">
             <a ng-href="#/copyright">Copyright</a>
         </li>
     </ul>
 
-    <br>
-    <br>
-    <!--<% if controller.action_name == 'index' %>-->
-    <!--<%=render(:partial => "./mission") %>-->
-    <!--<% end %>-->
+    <br> <br>
+
+    <div ng-include="'mission.html'" ng-show="showMission()"></div>
 
 </div>

@@ -3,7 +3,7 @@
 <div id="gallery" style="text-align:center;">
 
     <div ng-repeat="photo in photos" style="text-align:center; width:175px; float:left; padding-bottom:40px; padding-left:35px; padding-right:35px;">
-        <a ng-href="#/photo/{{photo.filename}}">
+        <a ng-href="#/gallery/{{galleryName}}/photo/{{photo.filename}}">
             <img ng-src="images/{{getThumb(photo)}}" />
         </a>
         <br>

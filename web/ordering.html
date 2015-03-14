@@ -1,7 +1,8 @@
 	<H2>Placing Your Photography Order
 	</H2>
-		<p><span id="first_letter" class="first_letter">A</span>ll photographs, each of which is titled for easy reference, may be purchased by mailing the printable <%= link_to "order form", :action => "order_form" %> and a check to: Image Source, P.O. Box 334, Burlington, WI 53105-0334. If you need assistance with your order, contact Fred at {{info.phone}} or <%=link_to 'fred@frednoer.com', {:controller=> 'main', :action => 'contact'}, :class=>'email'%>.
-		</p> 
+		<!--<p><span id="first_letter" class="first_letter">A</span>ll photographs, each of which is titled for easy reference, may be purchased by mailing the printable <%= link_to "order form", :action => "order_form" %> and a check to: Image Source, P.O. {{info.address}}. If you need assistance with your order, contact Fred at {{info.phone}} or <a ng-href="#/contact" class="email">{{info.email}}</a>.-->
+		<p><span id="first_letter" class="first_letter">A</span>ll photographs are titled for easy reference.  If you need assistance with your order, contact Fred at {{info.phone}} or <a ng-href="#/contact" class="email">{{info.email}}</a>.
+		</p>
 		
 		<p><b>Presentation</b>
 		</p>
@@ -17,61 +18,16 @@
 		<p>Every photograph is signed and comes with an artist's statement and a label containing the title, scene location, date when the scene was photographed, and signature. The label may be affixed to the back of the framed work if you so desire.
 		</p>
 		
-		<b>Pricing - Fiber Photographs</b>
-		<table class="table" border=0 cellspacing=0 style="width:300px;margin-left:-10px;text-align:center;">
-		    <tr>
-		        <th>Size</th>
-		        <th>Photo only</th>
-		        <th>Matted</th>
-				<th>Framed</th>
-		    </tr>
-		    <tr>
-		        <td>4x5</td>
-		        <td>$65</td>
-		        <td>$100</td>
-				<td>$135</td>
-		    </tr>
-		    <tr>
-		        <td>5x7</td>
-		        <td>$75</td>
-		        <td>$115</td>
-				<td>$175</td>
-		    </tr>
-		    <tr>
-		        <td>8x10</td>
-		        <td>$85</td>
-		        <td>$140</td>
-				<td>$215</td>
-		    </tr>
-		    <tr>
-		        <td>11x14</td>
-		        <td>$115</td>
-		        <td>$185</td>
-				<td>$295</td>
-		    </tr>
-		    <tr>
-		        <td>16x20</td>
-		        <td>$165</td>
-		        <td>$250</td>
-				<td>$395</td>
-		    </tr>
-		</table>
-		<br>
-		
-		<b>Sales Tax</b>
-		<p>A 5.5% tax is added to each order with a Wisconsin address. No sales tax is charged to an order shipped to any other state.
-		</p>
-		
 		<br><b>Order Verification</b>
 		<p>When your order is received, you will be sent confirmation via e-mail or called on the phone. 
 		</p>
 		
 		<br><b>Delivery Time</b>
-		<p>Orders are processed as quickly as possible.  Depending on Fred's production schedule, you should receive your order in 1-2 weeks.  To receive an update about the status of your order, contact Fred at {{info.phone}} or <%=link_to 'fred@frednoer.com', {:controller=> 'main', :action => 'contact'}, :class=>'email'%>.
+		<p>Orders are processed as quickly as possible.  Depending on Fred's production schedule, you should receive your order in 1-2 weeks.  To receive an update about the status of your order, contact Fred at {{info.phone}} or <a ng-href="#/contact" class="email">{{info.email}}</a>.
 		<p/>
 		
 		<br><b>Shipping and Handling</b>
-		<p>Each package is sent via UPS using its Ground service. Shipments cannot be made to P.O. boxes. For shipments to Alaska, Hawaii, and foreign countries, call {{info.phone}} or e-mail <%=link_to 'fred@frednoer.com', {:controller=> 'main', :action => 'contact'}, :class=>'email'%> for rates. Shipments to APO and FPO addresses must be sent via Priority Mail through the U.S. Postal Service, so please call or e-mail for charges.
+		<p>Each package is sent via UPS using its Ground service. Shipments cannot be made to P.O. boxes. For shipments to Alaska, Hawaii, and foreign countries, call {{info.phone}} or e-mail <a ng-href="#/contact" class="email">{{info.email}}</a> for rates. Shipments to APO and FPO addresses must be sent via Priority Mail through the U.S. Postal Service, so please call or e-mail for charges.
 		</p>
 		
 		<p>The rates for UPS Ground shipping to the 48 continental states are in the table below. Please note the Order Total is the amount before sales tax (where applicable).
@@ -101,13 +57,13 @@
 		</table>
 		
 		<p>
-		If you notice external damage to your package, refuse the shipment, and you will be assured of an immediate replacement or a refund. What if you find damaged or incorrect contents after opening your package? Retain the original packaging, and call {{info.phone}} or e-mail <%=link_to 'fred@frednoer.com', {:controller=> 'main', :action => 'contact'}, :class=>'email'%> to correct the problem.
+		If you notice external damage to your package, refuse the shipment, and you will be assured of an immediate replacement or a refund. What if you find damaged or incorrect contents after opening your package? Retain the original packaging, and call {{info.phone}} or e-mail <a ng-href="#/contact" class="email">{{info.email}}</a> to correct the problem.
 		</p>
 
 		<p>No CODs.</p>
 		
 		<br><b>Returning An Order</b>
-		<p>For a purchase you find unsuitable for any reason, it may be returned within 30 days of receipt, with you paying the return shipping. A refund, credit, or exchange will be issued promptly for photographs that are in a condition permitting reselling. Contact Fred Noer in advance at {{info.phone}} or <%=link_to 'fred@frednoer.com', {:controller=> 'main', :action => 'contact'}, :class=>'email'%>, and return the item carefully in the original packaging. A refund may be refused if items are not repacked well.
+		<p>For a purchase you find unsuitable for any reason, it may be returned within 30 days of receipt, with you paying the return shipping. A refund, credit, or exchange will be issued promptly for photographs that are in a condition permitting reselling. Contact Fred Noer in advance at {{info.phone}} or <a ng-href="#/contact" class="email">{{info.email}}</a>, and return the item carefully in the original packaging. A refund may be refused if items are not repacked well.
 		</p>
 		
 		<p>After 30 days, refunds only will be issued on an individual case basis. Each refund will be a credit against a future purchase.

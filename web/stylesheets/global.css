@@ -15,11 +15,21 @@ H3 {line-height:120%;}
 
 p {line-height:1.4em;}
 
-ul
+ul#nav, #nav ul
 {
-    line-height: 2em;
+    line-height: 1.9em;
     list-style-type: none;
     padding-left: 0px;
+}
+
+.title
+{
+    margin-bottom: 5px;
+}
+
+.photo
+{
+    text-align: center;
 }
 
 
@@ -52,13 +62,13 @@ a:hover {color:black;}
 #nav {
   font-size:10pt;
   /*line-height:1.6em;*/
-  padding-top:12px;
+  /*padding-top:12px;*/
   width: 150px; 
   margin-left:7px
 }
 
 .fredbox {
-	background-image: url(../images/grade.JPG);
+	background-image: url(../images/_main/grade.JPG);
 	background-repeat:no-repeat;
 	font:small-caps 10pt Verdana;
 	font-size:14px; 
@@ -89,6 +99,12 @@ a:hover {color:black;}
 
 .pointer {font-size:16px;font-weight:bold;}
 
+.square
+{
+    background-image: url("../images/_main/square.JPG");
+    display: inline-block;
+}
+
 
 /* MAIN */
 
@@ -97,7 +113,12 @@ a:hover {color:black;}
   width:560px;
   padding-top: 5px;
   margin-left:180px;
-  min-height:700px;
+  /*min-height:700px;*/
+}
+
+#bottom-nav
+{
+    margin-left: 180px;
 }
 
 .main table {font-size:10pt;}
@@ -105,8 +126,8 @@ a:hover {color:black;}
 #title {
    
     margin-left: auto; 
-    margin-right: auto; 
-    font:small-caps 36px/36px 'Times New Roman', serif; 
+    margin-right: auto;
+    font:small-caps 36px/36px 'Times New Roman', serif;
     font-weight:bold; 
     text-align:center; 
     letter-spacing:4px; 
@@ -117,7 +138,7 @@ a:hover {color:black;}
 /*.email  {font-family: Verdana, sans-serif; color:#555555; font-size: 10pt; font-weight:normal} */
 .email  {font-family: Verdana, sans-serif; color:black; font-size: 10pt; font-weight:normal}
 
-.contact_info .email {font-size: 10px}
+.contact-info .email {font-size: 10px}
 
 #banner {
   text-align: center;
@@ -165,7 +186,13 @@ a:hover {color:black;}
 
 .bottom_nav {text-align:center;	line-height:130%;}
 
-.contact_info {text-align:center; font-size: 10px;line-height:1.6em;}
+.contact-info
+{
+    text-align:center;
+    font-size: 10px;
+    line-height:1.6em;
+    margin-left: 180px;
+}
 
 .current_link_footer
 {

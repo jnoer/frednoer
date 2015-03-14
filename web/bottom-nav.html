@@ -1,0 +1,101 @@
+<div class="bottom_nav">
+    <span ng-show="isWritingEditingPath()">
+        <span ng-show="isCurrentPath('/writing')" class="current_link_footer">Writing</span>
+        <span ng-show="!isCurrentPath('/writing')">
+            <a ng-href="#/writing">Writing</a>
+        </span>
+
+       &nbsp;|&nbsp;
+
+        <span ng-show="isCurrentPath('/editing')" class="current_link_footer">Editing</span>
+        <span ng-show="!isCurrentPath('/editing')">
+            <a ng-href="#/editing">Editing</a>
+        </span>
+
+       &nbsp;|&nbsp;
+
+        <span ng-show="isCurrentPath('/copyediting')" class="current_link_footer">Copyediting</span>
+        <span ng-show="!isCurrentPath('/copyediting')">
+            <a ng-href="#/copyediting">Copyediting</a>
+        </span>
+
+       &nbsp;|&nbsp;
+
+        <span ng-show="isCurrentPath('/proofreading')" class="current_link_footer">Proofreading</span>
+        <span ng-show="!isCurrentPath('/proofreading')">
+            <a ng-href="#/proofreading">Proofreading</a>
+        </span>
+
+        &nbsp;|&nbsp;
+
+        <span ng-show="isCurrentPath('/drag-racing')" class="current_link_footer">Drag Racing</span>
+        <span ng-show="!isCurrentPath('/drag-racing')">
+            <a ng-href="#/drag-racing">Drag Racing</a>
+        </span>
+    </span>
+
+    <span ng-show="isPhotographyPath()">
+        <span ng-show="isCurrentPath('/galleries')" class="current_link_footer">Galleries</span>
+        <span ng-show="!isCurrentPath('/galleries')">
+            <a ng-href="#/galleries">Galleries</a>
+        </span>
+
+        &nbsp;|&nbsp;
+
+        <span ng-show="isCurrentPath('/ordering')" class="current_link_footer">Ordering</span>
+        <span ng-show="!isCurrentPath('/ordering')">
+            <a ng-href="#/ordering">Ordering</a>
+        </span>
+
+        &nbsp;|&nbsp;
+
+        <span ng-show="isCurrentPath('/commissions')" class="current_link_footer">Commissions</span>
+        <span ng-show="!isCurrentPath('/commissions')">
+            <a ng-href="#/commissions">Commissions</a>
+        </span>
+
+        &nbsp;|&nbsp;
+
+        <span ng-show="isCurrentPath('/licensing')" class="current_link_footer">Licensing</span>
+        <span ng-show="!isCurrentPath('/licensing')">
+            <a ng-href="#/licensing">Licensing</a>
+        </span>
+    </span>
+
+     <span ng-show="!isPhotographyPath() && !isWritingEditingPath()">
+        <span ng-show="isCurrentPath('/writing-editing')" class="current_link_footer">Writing and Editing</span>
+        <span ng-show="!isCurrentPath('/writing-editing')">
+            <a ng-href="#/writing-editing">Writing and Editing</a>
+        </span>
+
+        &nbsp;|&nbsp;
+
+        <span ng-show="isCurrentPath('/photography')" class="current_link_footer">Photography</span>
+        <span ng-show="!isCurrentPath('/photography')">
+            <a ng-href="#/photography">Photography</a>
+        </span>
+     </span>
+
+    <br />
+
+    <span ng-show="isCurrentPath('/about')" class="current_link_footer">About Fred Noer</span>
+    <span ng-show="!isCurrentPath('/about')">
+        <a ng-href="#/about">About Fred Noer</a>
+    </span>
+
+    &nbsp;|&nbsp;
+
+    <span ng-show="isCurrentPath('/contact')" class="current_link_footer">Contact</span>
+    <span ng-show="!isCurrentPath('/contact')">
+        <a ng-href="#/contact">Contact</a>
+    </span>
+
+    &nbsp;|&nbsp;
+
+    <span ng-show="isCurrentPath('/copyright')" class="current_link_footer">Copyright</span>
+    <span ng-show="!isCurrentPath('/copyright')">
+        <a ng-href="#/copyright">Copyright</a>
+    </span>
+
+
+</div>
