@@ -45,7 +45,13 @@ a:hover {color:black;}
 
 /* SIDE */
 
-#side {position: absolute;top: 0;left: 10px;}
+#side {
+    /*position: absolute;*/
+    top: 10px;
+    /*left: 10px;*/
+    position: fixed;
+    margin-left: -180px;
+}
 
 #nav {
   font-size:10pt;
@@ -111,18 +117,15 @@ ul#nav
 
 
 /* MAIN */
+.container
+{
+    margin-left: 175px;
+}
 
 .main {
   font-size:80%;
   width:560px;
   padding-top: 5px;
-  margin-left:190px;
-  /*min-height:700px;*/
-}
-
-#bottom-nav
-{
-    margin-left: 180px;
 }
 
 .main table {font-size:10pt;}
@@ -175,7 +178,6 @@ ul#nav
     font-weight:bold; 
 	margin-bottom:0;
 	margin-top:5px;
-	/*display:none;*/
 }
 
 

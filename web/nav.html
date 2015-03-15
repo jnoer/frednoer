@@ -1,4 +1,4 @@
-<div id="side" ng-controller="navCtrl">
+<nav id="side" ng-controller="navCtrl">
 
     <div ng-include="'fredbox.html'"></div>
 
@@ -28,7 +28,7 @@
                     </li>
                     <li>
                         <a ng-href="#/drag-racing">Drag Racing</a>
-                        <div ng-class="{square: isCurrentPath('/drag-racing')}"></div>
+                        <div ng-class="{square: isCurrentPath('/drag-racing') || isCurrentPath('/sample-drag-racing')}"></div>
                     </li>
                 </ul>
             </div>
@@ -78,4 +78,4 @@
 
     <div ng-include="'mission.html'" ng-show="showMission()"></div>
 
-</div>
+</nav>

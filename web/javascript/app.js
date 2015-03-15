@@ -253,7 +253,6 @@ appModule.controller('navCtrl', ['$scope', '$location', function ($scope, $locat
     };
 
     $scope.isCurrentPath = function(path) {
-        //return $location.path().indexOf(path) > -1;
         return $location.path().endsWith(path);
     };
 
@@ -263,6 +262,7 @@ appModule.controller('navCtrl', ['$scope', '$location', function ($scope, $locat
             $location.path().endsWith('/copyediting') ||
             $location.path().endsWith('/proofreading') ||
             $location.path().endsWith('/drag-racing') ||
+            $location.path().endsWith('/sample-drag-racing') ||
             $scope.isWritingPath();
     };
 
