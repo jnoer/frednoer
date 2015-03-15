@@ -18,7 +18,16 @@ a.prev_next:hover {color:white; background-color:black}
 
 /*** TABLE ***/
 
-#gallery_table {width:550px;}
+#gallery-table {width:550px;}
+
+#gallery-table td
+{
+    padding-left:35px;
+    padding-right:35px;
+    padding-bottom:20px;
+    padding-top:20px;
+    text-align:center;
+}
 
 
 /***  IMAGE  ***/

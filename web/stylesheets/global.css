@@ -73,6 +73,7 @@ ul#nav
     list-style-type: none;
     padding-left: 0px;
     margin-top: -4px;
+    margin-left: 20px;
 }
 
 .fredbox {
@@ -188,7 +189,6 @@ ul#nav
 .table {text-align:center;}
 
 .table th {font-weight:normal;font-style:italic;}
-
 
 /* FOOTER */
 

@@ -153,6 +153,7 @@ appModule.controller('galleriesCtrl', ['$scope', 'galleriesService', function ($
 
 appModule.controller('galleryCtrl', ['$scope', '$routeParams', 'photosService', function ($scope, $routeParams, photosService) {
     $scope.galleryName = $routeParams.galleryName;
+    $scope.photoMap = [];
 
     $scope.getThumb = function(photo) {
         return photo.filename.replace('.JPG', '_thumb.JPG');
@@ -162,7 +163,15 @@ appModule.controller('galleryCtrl', ['$scope', '$routeParams', 'photosService', 
         $scope.photos = photos.filter(function(item){
             return item.gallery === $routeParams.galleryName;
         });
+
+        for(var i = 0; i < $scope.photos.length; i++) {
+            if((i + 1) % 2 == 0) {
+                $scope.photoMap.push([$scope.photos[i-1], $scope.photos[i]]);
+            }
+        }
     });
+
+
 }]);
 
 appModule.controller('photoCtrl', ['$scope', '$routeParams', 'photosService', function ($scope, $routeParams, photosService) {
