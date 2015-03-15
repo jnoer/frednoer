@@ -118,13 +118,36 @@ appModule.service('photosService', ['$http', '$q', function($http, $q) {
     };
 }]);
 
+appModule.service('galleriesService', ['$http', '$q', function($http, $q) {
+    var galleries = [];
+
+    this.getGalleries = function() {
+        var resultDeferred = $q.defer();
+        var resultPromise = resultDeferred.promise;
+
+        if (galleries.length === 0) {
+            var httpPromise = $http.get('galleries.json');
+            httpPromise.then(
+                function gotData(data) {
+                    galleries = data.data;
+                    resultDeferred.resolve(galleries);
+                });
+        }
+        else {
+            resultDeferred.resolve(galleries);
+        }
+
+        return resultPromise;
+    };
+}]);
+
 appModule.controller('mainController', ['$scope', '$location', function ($scope, $location) {
     $scope.location = $location;
 }]);
 
-appModule.controller('galleriesCtrl', ['$scope', '$http', function ($scope, $http) {
-    $http.get('galleries.json').success(function(data) {
-       $scope.galleries = data;
+appModule.controller('galleriesCtrl', ['$scope', 'galleriesService', function ($scope, galleriesService) {
+    galleriesService.getGalleries().then(function(galleries){
+        $scope.galleries = galleries;
     });
 }]);
 
