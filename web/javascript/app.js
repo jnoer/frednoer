@@ -292,5 +292,13 @@ appModule.controller('navCtrl', ['$scope', '$location', function ($scope, $locat
     };
 }]);
 
+appModule.directive('email', [function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        template: '<a href="mailto:{{info.email}}?Subject=Frednoer.com%20inquiry" target="_top" class="email">{{info.email}}</a>',
+        controller: 'generalCtrl'
+    };
+}]);
 
 
