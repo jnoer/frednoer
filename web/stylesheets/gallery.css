@@ -13,7 +13,6 @@ a.prev_next:hover {color:white; background-color:black}
 
 #gallery  .title {
   font-size: 10pt;
-  line-height:230%;
 }
 
 /*** TABLE ***/
@@ -53,7 +52,7 @@ a.prev_next:hover {color:white; background-color:black}
   border-width:2px;
   margin-right:auto;
   margin-left:auto;	
-  padding:15px;
+  padding:15px 15px 0px 15px;
   background-color:white;
 
 }
