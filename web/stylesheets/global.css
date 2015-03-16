@@ -46,18 +46,14 @@ a:hover {color:black;}
 /* SIDE */
 
 #side {
-    /*position: absolute;*/
     top: 10px;
-    /*left: 10px;*/
     position: fixed;
     margin-left: -180px;
 }
 
 #nav {
   font-size:10pt;
-  /*line-height:1.6em;*/
-  /*padding-top:12px;*/
-  width: 150px; 
+  width: 150px;
   margin-left:7px
 }
 
