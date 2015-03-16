@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <HTML>
 <HEAD>
-    <title>Fred Noer / Image Source</title>
-
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />-->
+
+    <title>Fred Noer / Image Source</title>
     <meta name="author" content="Jason Noer">
     <meta name="keywords" content="Fred Noer, Photography">
-    <meta name="description" content="Lake Geneva area photographer and writer fred noer offers photograpy, writing, and editing services.  Image Source.">
+    <meta name="description" content="Lake Geneva area photographer and writer Fred Noer offers photograpy, writing, and editing services via his company Image Source.">
     <meta name="robots" content="index, follow, noarchive">
     <meta name="googlebot" content="noarchive">
 
-    <link rel="stylesheet" href="../stylesheets/global.css">
-    <link rel="stylesheet" href="../stylesheets/gallery.css">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/gallery.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script src="javascript/libs/angular.min.js"></script>
     <script src="javascript/libs/angular-route.min.js"></script>
@@ -21,20 +24,25 @@
 
 <body>
 
-<div ng-app="frednoer" ng-controller="mainController" class="container">
+<div ng-app="frednoer" ng-controller="mainController" class="container container-fluid">
     <div ng-include="'home.html'" controller="home" ng-show="location.path()===''">
         <div ></div>
     </div>
 
-    <div ng-show="location.path() !== ''">
-        <div class="main" ng-view autoscroll="true"></div>
-        <br /> <br />
+    <div ng-show="location.path() !== ''" class="row">
+        <div ng-include="'nav.html'" class="col-sm-3 col-md-2 sidebar"></div>
 
-        <div id="bottom-nav" ng-controller="navCtrl" ng-include="'bottom-nav.html'"></div>
-        <br /> <br />
+        <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view autoscroll="true"></div>-->
+        <div class="col-sm-9 col-md-10  main" autoscroll="true">
+            <div ng-view></div>
+            <br /> <br />
 
-        <div ng-include="'contact-info.html'"></div>
-        <div ng-include="'nav.html'"></div>
+            <div id="bottom-nav" ng-controller="navCtrl" ng-include="'bottom-nav.html'"></div>
+            <br /> <br />
+
+            <div ng-include="'contact-info.html'"></div>
+        </div>
+        <br /> <br />
     </div>
 </div>
 
