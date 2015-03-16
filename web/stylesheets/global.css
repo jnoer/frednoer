@@ -156,8 +156,6 @@ a.email:hover
     color:brown;
 }
 
-.contact-info .email {font-size: 10px}
-
 #banner {
   text-align: center;
   background-color:#EFEFEF;
@@ -207,8 +205,9 @@ a.email:hover
     text-align:center;
     font-size: 10px;
     line-height:1.6em;
-    margin-left: 180px;
 }
+
+.contact-info .email {font-size: 10px}
 
 .current_link_footer
 {
