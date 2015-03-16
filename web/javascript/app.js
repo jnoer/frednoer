@@ -103,7 +103,7 @@ appModule.service('photosService', ['$http', '$q', function($http, $q) {
         var resultPromise = resultDeferred.promise;
 
         if (photos.length === 0) {
-            var httpPromise = $http.get('photos.json');
+            var httpPromise = $http.get('data/photos.json');
             httpPromise.then(
                 function gotData(data) {
                     photos = data.data;
@@ -126,7 +126,7 @@ appModule.service('galleriesService', ['$http', '$q', function($http, $q) {
         var resultPromise = resultDeferred.promise;
 
         if (galleries.length === 0) {
-            var httpPromise = $http.get('galleries.json');
+            var httpPromise = $http.get('data/galleries.json');
             httpPromise.then(
                 function gotData(data) {
                     galleries = data.data;
@@ -156,7 +156,7 @@ appModule.controller('galleryCtrl', ['$scope', '$routeParams', 'photosService', 
     $scope.photoMap = [];
 
     $scope.getThumb = function(photo) {
-        return photo.filename.replace('.JPG', '_thumb.JPG');
+        return photo ? photo.filename.replace('.JPG', '_thumb.JPG') : undefined;
     };
 
     photosService.getPhotos().then(function(photos) {
@@ -164,14 +164,10 @@ appModule.controller('galleryCtrl', ['$scope', '$routeParams', 'photosService', 
             return item.gallery === $routeParams.galleryName;
         });
 
-        for(var i = 0; i < $scope.photos.length; i++) {
-            if((i + 1) % 2 == 0) {
-                $scope.photoMap.push([$scope.photos[i-1], $scope.photos[i]]);
-            }
+        for(var i = 0; i < $scope.photos.length; i+=2) {
+            $scope.photoMap.push([$scope.photos[i], $scope.photos[i+1]]);
         }
     });
-
-
 }]);
 
 appModule.controller('photoCtrl', ['$scope', '$routeParams', 'photosService', function ($scope, $routeParams, photosService) {
