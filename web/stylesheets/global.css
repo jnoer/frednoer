@@ -143,7 +143,18 @@ ul#nav
 }
 
 /*.email  {font-family: Verdana, sans-serif; color:#555555; font-size: 10pt; font-weight:normal} */
-.email  {font-family: Verdana, sans-serif; color:black; font-size: 8pt; font-weight:bold}
+.email  {
+    font-family:
+    Verdana, sans-serif;
+    color:black;
+    font-size: 8pt;
+    font-weight:bold;
+}
+
+a.email:hover
+{
+    color:brown;
+}
 
 .contact-info .email {font-size: 10px}
 
