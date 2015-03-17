@@ -1,10 +1,10 @@
 <div class="gallery">
     <div  class="photo" >
-        <img ng-src="images/{{photo.filename}}" />
+        <img ng-src="images/{{photo.filename}}" style="width:inherit;"/>
 
         <span style="line-height:30%"> <br><br></span>
 
-        <table align="center" border=0 width="500px">
+        <table align="center" border=0 style="width:inherit;">
             <tr>
                 <td style="width:100px;text-align:left">
                     <a ng-show="previousPhoto() !== ''" ng-href="#/gallery/{{gallery}}/photo/{{previousPhoto()}}" class="prev_next"> &#171; Previous</a>
@@ -33,10 +33,5 @@
             <br><br>
         </div>
 
-        <br>
-
-        <br>
-
-        </table>
     </div>
 </div>
