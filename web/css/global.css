@@ -67,12 +67,18 @@ a:hover {color:black;}
 
 /* SIDE */
 
-#side {
+/*#side {*/
     /*top: 10px;*/
-    position: fixed;
+    /*position: fixed;*/
+    /*left:25px;*/
     /*margin-left: -180px;*/
-}
+/*}*/
 
+#sidebar
+{
+    position: fixed;
+    padding-left:20px;
+}
 
 #nav {
     /*font-size:10pt;*/
@@ -139,22 +145,22 @@ ul#nav
 
 
 /* MAIN */
-.container
+div.container
 {
+    padding-right: 25px;
+    padding-left: 25px;
     /*width: 1000px;*/
     /*margin-left: 175px;*/
 }
 
-.container.container-sm
-{
-    /*width: 700px;*/
-}
-
-/*.main {*/
+#main {
   /*font-size:80%;*/
   /*width:560px;*/
   /*padding-top: 5px;*/
-/*}*/
+
+    padding-left:0px;
+    padding-right:25px;
+}
 
 .main table {font-size:10pt;}
 
