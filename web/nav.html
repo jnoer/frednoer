@@ -12,23 +12,23 @@
                 <ul>
                     <li>
                         <a ng-href="#/writing">Writing</a>
-                        <div ng-class="{square: isWritingPath()}"></div>
+                        <div ng-class="{'arrow-left': isWritingPath()}"></div>
                     </li>
                     <li>
                         <a ng-href="#/editing">Editing</a>
-                        <div ng-class="{square: isCurrentPath('/editing')}"></div>
+                        <div ng-class="{'arrow-left': isCurrentPath('/editing')}"></div>
                     </li>
                     <li>
                         <a ng-href="#/copyediting">Copyediting</a>
-                        <div ng-class="{square: isCurrentPath('/copyediting')}"></div>
+                        <div ng-class="{'arrow-left': isCurrentPath('/copyediting')}"></div>
                     </li>
                     <li>
                         <a ng-href="#/proofreading">Proofreading</a>
-                        <div ng-class="{square: isCurrentPath('/proofreading')}"></div>
+                        <div ng-class="{'arrow-left': isCurrentPath('/proofreading')}"></div>
                     </li>
                     <li>
                         <a ng-href="#/drag-racing">Drag Racing</a>
-                        <div ng-class="{square: isCurrentPath('/drag-racing') || isCurrentPath('/sample-drag-racing')}"></div>
+                        <div ng-class="{'arrow-left': isCurrentPath('/drag-racing') || isCurrentPath('/sample-drag-racing')}"></div>
                     </li>
                 </ul>
             </div>
@@ -43,19 +43,19 @@
                 <ul>
                     <li>
                         <a ng-href="#/galleries">Galleries</a>
-                        <div ng-class="{square: isGalleryPath()}"></div>
+                        <div ng-class="{'arrow-left': isGalleryPath()}"></div>
                     </li>
                     <li>
                         <a ng-href="#/ordering">Ordering</a>
-                        <div ng-class="{square: isCurrentPath('/ordering')}"></div>
+                        <div ng-class="{'arrow-left': isCurrentPath('/ordering')}"></div>
                     </li>
                     <li>
                         <a ng-href="#/commissions">Commissions</a>
-                        <div ng-class="{square: isCurrentPath('/commissions')}"></div>
+                        <div ng-class="{'arrow-left': isCurrentPath('/commissions')}"></div>
                     </li>
                     <li>
                         <a ng-href="#/licensing">Licensing</a>
-                        <div ng-class="{square: isCurrentPath('/licensing')}"></div>
+                        <div ng-class="{'arrow-left': isCurrentPath('/licensing')}"></div>
                     </li>
                 </ul>
             </div>
