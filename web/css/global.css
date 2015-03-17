@@ -5,11 +5,11 @@
 	/*position: relative;*/
 /*}*/
 
-H2 {
-    /*font-size:20pt;*/
+.container H2 {
+    font-size:20pt;
 	font-weight:bold;
 	font-family:Rockwell, Verdana, sans-serif;
-	/*line-height:120%;*/
+	line-height:120%;
 	/*margin-top:0;*/
 }
 	
@@ -142,9 +142,9 @@ ul#nav
     /*margin-left: 175px;*/
 }
 
-.container-sm
+.container.container-sm
 {
-    /*width: 800px;*/
+    width: 700px;
 }
 
 /*.main {*/

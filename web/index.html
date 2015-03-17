@@ -25,11 +25,11 @@
 <body>
 
 <div ng-app="frednoer" ng-controller="mainController">
-    <div ng-include="'home.html'" controller="home" ng-show="location.path()===''" class="container-sm container-fluid">
+    <div ng-include="'home.html'" controller="home" ng-show="location.path()===''" class="container container-sm">
         <div ></div>
     </div>
 
-    <div ng-show="location.path() !== ''" class="container container-fluid">
+    <div ng-show="location.path() !== ''" class="container">
         <div class="row">
             <div ng-include="'nav.html'" class="col-sm-3 col-md-2 sidebar"></div>
 
