@@ -1,5 +1,5 @@
 <div controller="homeCtrl" class="row" ng-init="imageUrl='images/_main/cyi.jpg'">
-    <div class="col-xs-8">
+    <div class="col-xs-12 col-sm-7 col-md-8">
                 <h2 style="text-align:center">Reach New Heights
               With High-Quality Writing
               and Art Photography
@@ -17,8 +17,6 @@
                           <a ng-href="#/photography" ng-mouseover="imageUrl='images/_main/aab.jpg'">Art Photography</a>
                     </div>
 
-                    <!--<br>-->
-
                     <div style="line-height:100%;">
                         <span style="letter-spacing:2px; font: bold small-caps 14px/14px 'Humans;">Fred Noer / Image Source</span><br/>
                         <div style="margin-top:5px;"></div>
@@ -29,7 +27,7 @@
                 </div>
     </div>
 
-    <div class="col-xs-4 hidden-xs">
+    <div class="hidden-xs col-sm-5 col-md-4 ">
         <img ng-src="{{imageUrl}}" style="border:solid black 1px; width:250px;">
     </div>
 </div>
