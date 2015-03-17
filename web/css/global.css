@@ -23,15 +23,9 @@ p
     /*line-height:1.4em;*/
 }
 
-.photo
-{
-    text-align: center;
-}
-
-
 /* LINKS */
 
-a
+.container a
 {
     font-family: Verdana, sans-serif;
     color:#555555;
@@ -44,105 +38,13 @@ a:visited {text-decoration: none; }
 a:active {text-decoration: none; }
 a:hover {color:black;}
 
-.home_link a
-{
-    font-family: arial, tahoma, 'arial black';
-    color:brown;
-    font-size: 14px;
-    font-weight:bold
-}
-
-.home_link a:link {text-decoration: none;}
-.home_link a:visited {text-decoration: none;}
-.home_link a:active {text-decoration: none; }
-.home_link a:hover {color:black;}
-
-#notice {
-  border: 2px solid green;
-  padding: 1em;
-  margin-bottom: 2em;
-  background-color: #f0f0f0;
-  font: bold smaller sans-serif;
-}
-
-/* SIDE */
-
-/*#side {*/
-    /*top: 10px;*/
-    /*position: fixed;*/
-    /*left:25px;*/
-    /*margin-left: -180px;*/
+/*#notice {*/
+  /*border: 2px solid green;*/
+  /*padding: 1em;*/
+  /*margin-bottom: 2em;*/
+  /*background-color: #f0f0f0;*/
+  /*font: bold smaller sans-serif;*/
 /*}*/
-
-#sidebar
-{
-    position: fixed;
-    padding-left: 20px;
-    padding-top: 15px;
-}
-
-#nav {
-    /*font-size:10pt;*/
-    /*width: 150px;*/
-    /*margin-left:7px*/
-}
-
-ul#nav
-{
-    line-height: 1.9em;
-    list-style-type: none;
-    padding-left: 0px;
-}
-
-#nav ul
-{
-    line-height: 1.5em;
-    list-style-type: none;
-    padding-left: 0px;
-    margin-top: -4px;
-    margin-left: 20px;
-}
-
-.fredbox {
-	background-image: url(../images/_main/grade.JPG);
-	background-repeat:no-repeat;
-	font:small-caps 10pt Verdana;
-	font-size:14px; 
-	font-weight:bold; 
-	width:138px;
-	height:10%;
-	color:black;
-	cursor:pointer; 
-	border:solid black 1px; 
-	padding:6px; 
-	text-align:center; 
-	letter-spacing:2px;
-	overflow:hidden;
-	background-color:rgb(75%,75%,75%);
-}
-
-.mission {
-	line-height: 140%;
-	width:138px;
-	font-size:10pt; 
-	border:solid black 1px; 
-	padding-top:10px;
-	padding-bottom:10px;
-	padding-right:0px;
-	padding-left:6px;
-	background-color:#EEEEEE
-}
-
-.pointer {font-size:16px;font-weight:bold;}
-
-.arrow-left {
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-right:6px solid black;
-    display: inline-block;
-}
 
 
 /* MAIN */
@@ -234,10 +136,9 @@ a.email:hover
 
 /* FOOTER */
 
-.bottom_nav {text-align:center;	line-height:130%;}
-
 .contact-info
 {
+    margin-top: 40px;
     text-align:center;
     font-size: 10px;
     line-height:1.6em;
@@ -256,21 +157,9 @@ a.email:hover
 
 /* IMAGES */
 
+.photo
+{
+    text-align: center;
+}
+
 .square {margin-bottom:1px;	height:6px;width:6px;}
-
-.img_upper_right
-{
-    float:right;
-    margin-left:10px;
-    margin-bottom:10px;
-    margin-top:5px;
-}
-
-.img_upper_left
-{
-    float:left;
-    margin-right:10px;
-    margin-bottom:10px;
-    margin-top:5px;
-}
-

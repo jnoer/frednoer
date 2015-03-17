@@ -167,10 +167,6 @@ appModule.controller('galleryCtrl', ['$scope', '$routeParams', 'photosService', 
         $scope.photos = photos.filter(function(item){
             return item.gallery === $routeParams.galleryName;
         });
-
-        for(var i = 0; i < $scope.photos.length; i+=2) {
-            $scope.photoMap.push([$scope.photos[i], $scope.photos[i+1]]);
-        }
     });
 }]);
 

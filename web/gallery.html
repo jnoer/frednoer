@@ -1,21 +1,14 @@
 <H2>{{galleryName}} Gallery</H2>
 
-<div id="gallery" style="text-align:center;">
+<div style="text-align:center;">
+    <div ng-repeat="photo in photos" class="gallery-photo-thumb">
+        <a ng-href="#/gallery/{{galleryName}}/photo/{{photo.filename}}">
+            <img ng-src="images/{{getThumb(photo)}}" />
+        </a>
 
-    <table id="gallery-table" align="center" style="text-align:center;">
-        <tr ng-repeat="row in photoMap">
-            <td ng-repeat="photo in row">
-                <a ng-href="#/gallery/{{galleryName}}/photo/{{photo.filename}}">
-                    <img ng-src="images/{{getThumb(photo)}}" />
-                </a>
-                <br>
+        <div class="title" style="font-weight:bold; font-size:12px; margin-top:-12px;">{{photo.title}}</div>
+    </div>
 
-                <span class="title" style="font-weight:bold; font-size:12px">{{photo.title}}</span>
-            </td>
-        </tr>
-    </table>
-
-    <br style="clear: both;" />
-    <a style="clear: both;" align="center" href="#/gallery/{{galleryName}}/#top">Back to top</a>
-
+    <br />
+    <a ng-href="#/gallery/{{galleryName}}/#top">Back to top</a>
 </div>

@@ -1,0 +1,22 @@
+<div class="nav-bottom">
+
+    <span ng-show="isCurrentPath('/about')" class="current_link_footer">About Fred Noer</span>
+    <span ng-show="!isCurrentPath('/about')">
+        <a ng-href="#/about">About Fred Noer</a>
+    </span>
+
+    &nbsp;|&nbsp;
+
+    <span ng-show="isCurrentPath('/contact')" class="current_link_footer">Contact</span>
+    <span ng-show="!isCurrentPath('/contact')">
+        <a ng-href="#/contact">Contact</a>
+    </span>
+
+    &nbsp;|&nbsp;
+
+    <span ng-show="isCurrentPath('/copyright')" class="current_link_footer">Copyright</span>
+    <span ng-show="!isCurrentPath('/copyright')">
+        <a ng-href="#/copyright">Copyright</a>
+    </span>
+
+</div>

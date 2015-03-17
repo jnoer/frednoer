@@ -1,4 +1,13 @@
-<div class="bottom_nav">
+<div class="nav-top">
+
+    <span>
+        <a ng-href="#/writing-editing">Writing and Editing</a>
+        &nbsp;|&nbsp;
+        <a ng-href="#/photography">Photography</a>
+    </span>
+
+    <div style="margin-top: 5px;"></div>
+
     <span ng-show="isWritingEditingPath()">
         <span ng-show="isCurrentPath('/writing')" class="current_link_footer">Writing</span>
         <span ng-show="!isCurrentPath('/writing')">
@@ -78,24 +87,7 @@
 
     <br />
 
-    <span ng-show="isCurrentPath('/about')" class="current_link_footer">About Fred Noer</span>
-    <span ng-show="!isCurrentPath('/about')">
-        <a ng-href="#/about">About Fred Noer</a>
-    </span>
 
-    &nbsp;|&nbsp;
-
-    <span ng-show="isCurrentPath('/contact')" class="current_link_footer">Contact</span>
-    <span ng-show="!isCurrentPath('/contact')">
-        <a ng-href="#/contact">Contact</a>
-    </span>
-
-    &nbsp;|&nbsp;
-
-    <span ng-show="isCurrentPath('/copyright')" class="current_link_footer">Copyright</span>
-    <span ng-show="!isCurrentPath('/copyright')">
-        <a ng-href="#/copyright">Copyright</a>
-    </span>
 
 
 </div>

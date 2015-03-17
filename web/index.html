@@ -14,6 +14,7 @@
     <meta name="googlebot" content="noarchive">
 
     <link href="css/global.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
     <link href="css/gallery.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -34,15 +35,13 @@
         <div class="row">
             <div ng-include="'nav.html'" class="hidden-xs col-sm-4 col-md-3 sidebar"></div>
 
-            <div id="" class="col-xs-12 hidden-sm hidden-md hidden-lg" ng-controller="navCtrl" ng-include="'bottom-nav.html'"></div>
+            <div id="" class="col-xs-12 hidden-sm hidden-md hidden-lg" ng-controller="navCtrl" ng-include="'nav-top.html'"></div>
 
             <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view autoscroll="true"></div>-->
             <div id="main" class="col-xs-12 col-sm-8 col-md-9  main" autoscroll="true">
                 <div ng-view></div>
-                <br /> <br />
 
-                <div id="bottom-nav" ng-controller="navCtrl" ng-include="'bottom-nav.html'"></div>
-                <br /> <br />
+                <div id="bottom-nav" class="hidden-sm hidden-md hidden-lg" ng-controller="navCtrl" ng-include="'nav-bottom.html'"></div>
 
                 <div ng-include="'contact-info.html'"></div>
             </div>
