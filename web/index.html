@@ -31,10 +31,12 @@
 
     <div ng-show="location.path() !== ''" class="container">
         <div class="row">
-            <div ng-include="'nav.html'" class="col-sm-3 col-md-2 sidebar"></div>
+            <div ng-include="'nav.html'" class="hidden-xs col-sm-4 col-md-3 sidebar"></div>
+
+            <div id="" class="col-xs-12 hidden-sm hidden-md hidden-lg" ng-controller="navCtrl" ng-include="'bottom-nav.html'"></div>
 
             <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view autoscroll="true"></div>-->
-            <div class="col-sm-9 col-md-10  main" autoscroll="true">
+            <div class="col-xs-12 col-sm-8 col-md-9  main" autoscroll="true">
                 <div ng-view></div>
                 <br /> <br />
 
