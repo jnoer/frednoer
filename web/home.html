@@ -1,7 +1,5 @@
-<div controller="homeCtrl" style="width:40em; margin-left: auto; margin-right: auto; text-align:left" ng-init="imageUrl = 'images/_main/cyi.jpg'">
-    <table>
-        <tr>
-            <td width="70%" style="vertical-align:top; padding-top:25px">
+<div controller="homeCtrl" class="row" ng-init="imageUrl='images/_main/cyi.jpg'">
+    <div class="col-xs-8">
                 <h2 style="text-align:center">Reach New Heights
               With High-Quality Writing
               and Art Photography
@@ -11,6 +9,7 @@
                     <span id="first_letter" class="first_letter" style="margin-top:-1px">W</span>hether you are interested in writing and editing or black-and-white art photographs, Fred Noer can meet your needs with excellent services and products. To learn more, click on the name of the section below that serves your interest.
                 </div>
                 <br>
+
                 <div style="text-align: center; vertical-align: bottom;">
 
                     <div style="font-size:16px" ng-mouseleave="imageUrl='images/_main/cyi.jpg'">
@@ -18,22 +17,19 @@
                           <a ng-href="#/photography" ng-mouseover="imageUrl='images/_main/aab.jpg'">Art Photography</a>
                     </div>
 
-                    <br>
+                    <!--<br>-->
 
                     <div style="line-height:100%;">
                         <span style="letter-spacing:2px; font: bold small-caps 14px/14px 'Humans;">Fred Noer / Image Source</span><br/>
-                        <div style="margin-top:5px;"/>
+                        <div style="margin-top:5px;"></div>
                         <span style="font-face:Verdana; font-size:11px; line-height:130%">Post Office Box 334</span><br/>
                         <span style="font-face:Verdana; font-size:11px; line-height:130%">Burlington, Wisconsin 53105-0334</span><br/>
                         <span style="font-face:Verdana; font-size:11px; line-height:130%">262&#8209;661&#8209;4538&nbsp;&#183;&nbsp;<email></email></span>
                     </div>
                 </div>
-            </td>
-            <td>
-                <div style="width:300px; float:right; padding:2px;  margin-left:15px;margin-bottom:0px;">
-                    <img ng-src="{{imageUrl}}" style="border:solid black 1px; width:250px;">
-                </div>
-            </td>
-        </tr>
-    </table>
+    </div>
+
+    <div class="col-xs-4 hidden-xs">
+        <img ng-src="{{imageUrl}}" style="border:solid black 1px; width:250px;">
+    </div>
 </div>

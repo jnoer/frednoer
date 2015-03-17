@@ -24,25 +24,27 @@
 
 <body>
 
-<div ng-app="frednoer" ng-controller="mainController" class="container container-fluid">
-    <div ng-include="'home.html'" controller="home" ng-show="location.path()===''">
+<div ng-app="frednoer" ng-controller="mainController">
+    <div ng-include="'home.html'" controller="home" ng-show="location.path()===''" class="container-sm container-fluid">
         <div ></div>
     </div>
 
-    <div ng-show="location.path() !== ''" class="row">
-        <div ng-include="'nav.html'" class="col-sm-3 col-md-2 sidebar"></div>
+    <div ng-show="location.path() !== ''" class="container container-fluid">
+        <div class="row">
+            <div ng-include="'nav.html'" class="col-sm-3 col-md-2 sidebar"></div>
 
-        <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view autoscroll="true"></div>-->
-        <div class="col-sm-9 col-md-10  main" autoscroll="true">
-            <div ng-view></div>
+            <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view autoscroll="true"></div>-->
+            <div class="col-sm-9 col-md-10  main" autoscroll="true">
+                <div ng-view></div>
+                <br /> <br />
+
+                <div id="bottom-nav" ng-controller="navCtrl" ng-include="'bottom-nav.html'"></div>
+                <br /> <br />
+
+                <div ng-include="'contact-info.html'"></div>
+            </div>
             <br /> <br />
-
-            <div id="bottom-nav" ng-controller="navCtrl" ng-include="'bottom-nav.html'"></div>
-            <br /> <br />
-
-            <div ng-include="'contact-info.html'"></div>
         </div>
-        <br /> <br />
     </div>
 </div>
 

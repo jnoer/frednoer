@@ -142,6 +142,11 @@ ul#nav
     /*margin-left: 175px;*/
 }
 
+.container-sm
+{
+    width: 800px;
+}
+
 /*.main {*/
   /*font-size:80%;*/
   /*width:560px;*/
