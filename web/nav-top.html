@@ -13,8 +13,8 @@
     <div style="margin-top: 5px;"></div>
 
     <span ng-show="isWritingEditingPath()">
-        <span ng-show="isCurrentPath('/writing')" class="current_link_footer">Writing</span>
-        <span ng-show="!isCurrentPath('/writing')">
+        <span ng-show="isWritingPath()" class="current_link_footer">Writing</span>
+        <span ng-show="!isWritingPath()">
             <a ng-href="#/writing">Writing</a>
         </span>
 
@@ -41,15 +41,15 @@
 
         &nbsp;|&nbsp;
 
-        <span ng-show="isCurrentPath('/drag-racing')" class="current_link_footer">Drag Racing</span>
-        <span ng-show="!isCurrentPath('/drag-racing')">
+        <span ng-show="isCurrentPath('/drag-racing') || isCurrentPath('/sample-drag-racing')" class="current_link_footer">Drag Racing</span>
+        <span ng-show="!isCurrentPath('/drag-racing') && !isCurrentPath('/sample-drag-racing')">
             <a ng-href="#/drag-racing">Drag Racing</a>
         </span>
     </span>
 
     <span ng-show="isPhotographyPath()">
-        <span ng-show="isCurrentPath('/galleries')" class="current_link_footer">Galleries</span>
-        <span ng-show="!isCurrentPath('/galleries')">
+        <span ng-show="isGalleryPath()" class="current_link_footer">Galleries</span>
+        <span ng-show="!isGalleryPath('/galleries')">
             <a ng-href="#/galleries">Galleries</a>
         </span>
 
