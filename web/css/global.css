@@ -52,7 +52,7 @@ a:hover {color:black;}
     font-family:
     Verdana, sans-serif;
     color:black;
-    font-size: 8pt;
+    font-size: 9pt;
     font-weight:bold;
 }
 
@@ -107,11 +107,9 @@ a.email:hover
 {
     margin-top: 40px;
     text-align:center;
-    font-size: 10px;
+    font-size: 12px;
     line-height:1.6em;
 }
-
-.contact-info .email {font-size: 10px}
 
 .current_link_footer
 {
