@@ -117,7 +117,7 @@ a.email:hover
 {
     font-family:Verdana, sans-serif;
     font-weight:bold; 
-    font-size:14px; 
+    /*font-size:14px; */
     color:brown;
 }
 

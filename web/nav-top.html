@@ -1,9 +1,13 @@
 <div class="nav-top">
 
     <h4>
-        <a ng-href="#/writing-editing">Writing and Editing</a>
-        &nbsp;|&nbsp;
-        <a ng-href="#/photography">Photography</a>
+        <!--<a ng-href="#/writing-editing" ng-class="{'current_link_footer' : isWritingEditingPath()}">Writing and Editing</a>-->
+        <span ng-show="isWritingEditingPath()" class="current_link_footer">Writing and Editing</span>
+        <a ng-show="!isWritingEditingPath()" ng-href="#/writing-editing">Writing and Editing</a>
+        &nbsp&#183&nbsp
+        <!--<a ng-href="#/photography" ng-class="{'current_link_footer' : isPhotographyPath()}">Photography</a>-->
+        <span ng-show="isPhotographyPath()" class="current_link_footer">Photography</span>
+        <a ng-show="!isPhotographyPath()" ng-href="#/photography">Photography</a>
     </h4>
 
     <div style="margin-top: 5px;"></div>
@@ -71,19 +75,19 @@
         </span>
     </span>
 
-     <span ng-show="!isPhotographyPath() && !isWritingEditingPath()">
-        <span ng-show="isCurrentPath('/writing-editing')" class="current_link_footer">Writing and Editing</span>
-        <span ng-show="!isCurrentPath('/writing-editing')">
-            <a ng-href="#/writing-editing">Writing and Editing</a>
-        </span>
+     <!--<span ng-show="!isPhotographyPath() && !isWritingEditingPath()">-->
+        <!--<span ng-show="isCurrentPath('/writing-editing')" class="current_link_footer">Writing and Editing</span>-->
+        <!--<span ng-show="!isCurrentPath('/writing-editing')">-->
+            <!--<a ng-href="#/writing-editing">Writing and Editing</a>-->
+        <!--</span>-->
 
-        &nbsp;|&nbsp;
+        <!--&nbsp;|&nbsp;-->
 
-        <span ng-show="isCurrentPath('/photography')" class="current_link_footer">Photography</span>
-        <span ng-show="!isCurrentPath('/photography')">
-            <a ng-href="#/photography">Photography</a>
-        </span>
-     </span>
+        <!--<span ng-show="isCurrentPath('/photography')" class="current_link_footer">Photography</span>-->
+        <!--<span ng-show="!isCurrentPath('/photography')">-->
+            <!--<a ng-href="#/photography">Photography</a>-->
+        <!--</span>-->
+     <!--</span>-->
 
     <br />
 
