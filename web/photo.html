@@ -1,37 +1,35 @@
-<div class="gallery">
-    <div  class="photo" >
-        <img ng-src="images/{{photo.filename}}" style="width:inherit;"/>
+<div class="photo" >
+    <img ng-src="images/{{photo.filename}}" style="width:inherit;"/>
 
-        <span style="line-height:30%"> <br><br></span>
+    <span style="line-height:30%"> <br><br></span>
 
-        <table align="center" border=0 style="width:inherit;">
-            <tr>
-                <td style="width:100px;text-align:left">
-                    <a ng-show="previousPhoto() !== ''" ng-href="#/gallery/{{gallery}}/photo/{{previousPhoto()}}" class="prev_next"> &#171; Previous</a>
-                </td>
+    <table align="center" border=0 style="width:inherit;">
+        <tr>
+            <td style="width:100px;text-align:left">
+                <a ng-show="previousPhoto() !== ''" ng-href="#/gallery/{{gallery}}/photo/{{previousPhoto()}}" class="prev_next"> &#171; Previous</a>
+            </td>
 
-                <td style="font-size:10pt; width:300px; text-align:center;">
-                    <b>{{photo.title}}</b><br>
-                </td>
+            <td style="font-size:10pt; width:300px; text-align:center;">
+                <b>{{photo.title}}</b><br>
+            </td>
 
-                <td style="width:80px;text-align:right;">
-                    <a ng-show="nextPhoto() !== ''" ng-href="#/gallery/{{gallery}}/photo/{{nextPhoto()}}" class="prev_next">Next &#187;</a>
-                </td>
-            </tr>
-        </table>
+            <td style="width:80px;text-align:right;">
+                <a ng-show="nextPhoto() !== ''" ng-href="#/gallery/{{gallery}}/photo/{{nextPhoto()}}" class="prev_next">Next &#187;</a>
+            </td>
+        </tr>
+    </table>
 
-        <br style="line-height:40%">
-        {{photo.description}}
+    <br style="line-height:40%">
+    {{photo.description}}
 
-        <br>
-        {{getDate(photo) | date: 'MM/dd/yyyy'}}
+    <br>
+    {{getDate(photo) | date: 'MM/dd/yyyy'}}
 
+    <br><br>
+
+    <div>
+        <a ng-href="#/gallery/{{gallery}}">&#171; Back to the {{gallery}} gallery</a>
         <br><br>
-
-        <div>
-            <a ng-href="#/gallery/{{gallery}}">&#171; Back to the {{gallery}} gallery</a>
-            <br><br>
-        </div>
-
     </div>
+
 </div>

@@ -1,28 +1,25 @@
-/*#side {*/
-/*top: 10px;*/
-/*position: fixed;*/
-/*left:25px;*/
-/*margin-left: -180px;*/
-/*}*/
-
 #sidebar
 {
     position: fixed;
-    padding-left: 20px;
     padding-top: 15px;
+
+    /*800px layout*/
+    padding-left: 20px;
 }
 
-#nav {
-    font-size:10pt;
-    /*width: 150px;*/
-    margin-left:7px
-}
+/*#nav {*/
+    /*font-size:10pt;*/
+    /*margin-left:7px*/
+/*}*/
 
-ul#nav
+#nav
 {
+    font-size:10pt;
+    margin-left:7px;
     line-height: 1.9em;
     list-style-type: none;
     padding-left: 0px;
+    margin-top: 10px;
 }
 
 #nav ul
@@ -52,8 +49,7 @@ ul#nav
     font:small-caps 10pt Verdana;
     font-size:14px;
     font-weight:bold;
-    width:138px;
-    height:10%;
+    width:150px;
     color:black;
     cursor:pointer;
     border:solid black 1px;
