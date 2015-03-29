@@ -253,22 +253,7 @@ appModule.controller('navCtrl', ['$scope', '$location', function ($scope, $locat
     };
 
     $scope.isWritingEditingPath = function() {
-        return $location.path().endsWith('/writing-editing') ||
-            $location.path().endsWith('/editing') ||
-            $location.path().endsWith('/copyediting') ||
-            $location.path().endsWith('/proofreading') ||
-            $location.path().endsWith('/drag-racing') ||
-            $location.path().endsWith('/sample-drag-racing') ||
-            $scope.isWritingPath();
-    };
-
-    $scope.isWritingPath = function() {
-        return $location.path().endsWith('/writing') ||
-            $location.path().endsWith('/brochures') ||
-            $location.path().endsWith('/company-profiles') ||
-            $location.path().endsWith('/feature-articles') ||
-            $location.path().endsWith('/news-articles') ||
-            $location.path().endsWith('/news-releases');
+        return $location.path().endsWith('/writing-editing')
     };
 
     $scope.isPhotographyPath = function() {
