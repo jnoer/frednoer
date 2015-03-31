@@ -17,65 +17,16 @@ appModule.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'writing-editing.html',
             controller : 'generalCtrl'
         })
-        .when('/writing', {
-            templateUrl: 'writing.html',
-            controller : 'generalCtrl'
-        })
-        .when('/editing', {
-            templateUrl: 'editing.html',
-            controller : 'generalCtrl'
-        })
-        .when('/commissions', {
-            templateUrl: 'commissions.html',
-            controller : 'generalCtrl'
-        })
-        .when('/licensing', {
-            templateUrl: 'licensing.html',
-            controller : 'generalCtrl'
-        })
         .when('/about', {
             templateUrl: 'about.html'
         })
         .when('/contact', {
             templateUrl: 'contact.html',
-            controller : 'contactCtrl'
+            controller : 'generalCtrl'
         })
         .when('/copyright', {
             templateUrl: 'copyright.html',
             controller : 'generalCtrl'
-        })
-        .when('/ordering', {
-            templateUrl: 'ordering.html',
-            controller : 'generalCtrl'
-        })
-        .when('/writing/brochures', {
-            templateUrl: 'brochures.html'
-        })
-        .when('/writing/company-profiles', {
-            templateUrl: 'company-profiles.html'
-        })
-        .when('/copyediting', {
-            templateUrl: 'copyediting.html',
-            controller : 'generalCtrl'
-        })
-        .when('/proofreading', {
-            templateUrl: 'proofreading.html',
-            controller : 'generalCtrl'
-        })
-        .when('/drag-racing', {
-            templateUrl: 'drag-racing.html'
-        })
-        .when('/sample-drag-racing', {
-            templateUrl: 'sample-drag-racing.html'
-        })
-        .when('/writing/feature-articles', {
-            templateUrl: 'feature-articles.html'
-        })
-        .when('/writing/news-articles', {
-            templateUrl: 'news-articles.html'
-        })
-        .when('/writing/news-releases', {
-            templateUrl: 'news-releases.html'
         })
         .when('/photography', {
             templateUrl: 'photography.html',
@@ -233,14 +184,6 @@ appModule.controller('generalCtrl', ['$scope', 'INFO', function ($scope, INFO) {
     $scope.info = INFO;
 }]);
 
-appModule.controller('contactCtrl', ['$scope', 'INFO', function ($scope, INFO) {
-    $scope.info = INFO;
-
-    $scope.sendEmail = function(email) {
-
-    };
-}]);
-
 appModule.controller('navCtrl', ['$scope', '$location', function ($scope, $location) {
     $scope.showMission = function() {
         return $location.path().endsWith('writing-editing') ||
@@ -259,9 +202,6 @@ appModule.controller('navCtrl', ['$scope', '$location', function ($scope, $locat
     $scope.isPhotographyPath = function() {
         return $location.path().endsWith('/photography') ||
             $location.path().endsWith('/galleries') ||
-            $location.path().endsWith('/ordering') ||
-            $location.path().endsWith('/commissions') ||
-            $location.path().endsWith('/licensing') ||
             $location.path().indexOf('/gallery/') > -1 ||
             $location.path().indexOf('/photo/') > -1;
     };
