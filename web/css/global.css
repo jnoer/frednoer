@@ -100,6 +100,15 @@ a.email:hover
 
 .table th {font-weight:normal;font-style:italic;}
 
+.writing-editing td
+{
+    padding-left:8px;
+    padding-right:8px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    font-size: 9pt;
+}
+
 /* FOOTER */
 
 .contact-info
