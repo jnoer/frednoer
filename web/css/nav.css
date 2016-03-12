@@ -83,6 +83,19 @@
     display: inline-block;
 }
 
+/*drag racing*/
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-top: 6px solid black;
+    border-left: 5px solid transparent;
+    border-right:5px solid transparent;
+    display: inline-block;
+    margin-left: 2px;
+    position: relative;
+    top: -2px;
+}
+
 .home_link a
 {
     font-family: arial, tahoma, 'arial black';

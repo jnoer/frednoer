@@ -7,6 +7,17 @@
             <a ng-href="#/writing-editing">Writing and Editing</a>
         </li>
 
+        <li>
+            <div ng-show="isWritingEditingPath()">
+                <ul>
+                    <li>
+                        <a ng-href="#/drag-racing">Drag Racing</a>
+                        <div ng-class="{'arrow-left': isDragRacingPath()}"></div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
         <li ng-class="{home_link: isPhotographyPath()}">
             <a ng-href="#/photography">Photography</a>
         </li>

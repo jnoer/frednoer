@@ -165,6 +165,10 @@ appModule.controller('navCtrl', ['$scope', '$location', function ($scope, $locat
         return $location.path().endsWith('/writing-editing')
     };
 
+    $scope.isDragRacingPath = function() {
+        return $location.path().endsWith('/drag-racing');
+    };
+
     $scope.isPhotographyPath = function() {
         return $location.path().endsWith('/photography') ||
             $location.path().endsWith('/galleries') ||
