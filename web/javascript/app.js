@@ -50,50 +50,16 @@ appModule.config(['$routeProvider', function ($routeProvider) {
         });
 }]);
 
-appModule.service('photosService', ['$http', '$q', function($http, $q) {
-    var photos = [];
-
+appModule.service('photosService', ['$http', '$q', function($http) {
     this.getPhotos = function() {
-        var resultDeferred = $q.defer();
-        var resultPromise = resultDeferred.promise;
-
-        if (photos.length === 0) {
-            var httpPromise = $http.get('data/photos.json');
-            httpPromise.then(
-                function gotData(data) {
-                    photos = data.data;
-                    resultDeferred.resolve(photos);
-                });
-        }
-        else {
-            resultDeferred.resolve(photos);
-        }
-
-        return resultPromise;
+        return $http.get('data/photos.json', {cache: true})
     };
 }]);
 
-appModule.service('galleriesService', ['$http', '$q', function($http, $q) {
-    var galleries = [];
-
+appModule.service('galleriesService', ['$http', '$q', function($http) {
     this.getGalleries = function() {
-        var resultDeferred = $q.defer();
-        var resultPromise = resultDeferred.promise;
-
-        if (galleries.length === 0) {
-            var httpPromise = $http.get('data/galleries.json');
-            httpPromise.then(
-                function gotData(data) {
-                    galleries = data.data;
-                    resultDeferred.resolve(galleries);
-                });
-        }
-        else {
-            resultDeferred.resolve(galleries);
-        }
-
-        return resultPromise;
-    };
+        return $http.get('data/galleries.json', {cache: true});
+    }
 }]);
 
 appModule.controller('mainController', ['$scope', '$location', function ($scope, $location) {
@@ -102,7 +68,7 @@ appModule.controller('mainController', ['$scope', '$location', function ($scope,
 
 appModule.controller('galleriesCtrl', ['$scope', 'galleriesService', function ($scope, galleriesService) {
     galleriesService.getGalleries().then(function(galleries){
-        $scope.galleries = galleries;
+        $scope.galleries = galleries.data;
     });
 }]);
 
@@ -115,7 +81,7 @@ appModule.controller('galleryCtrl', ['$scope', '$routeParams', 'photosService', 
     };
 
     photosService.getPhotos().then(function(photos) {
-        $scope.photos = photos.filter(function(item){
+        $scope.photos = photos.data.filter(function(item){
             return item.gallery === $routeParams.galleryName;
         });
     });
@@ -128,8 +94,8 @@ appModule.controller('photoCtrl', ['$scope', '$routeParams', 'photosService', fu
 
     $scope.gallery = $routeParams.gallery;
 
-    photosService.getPhotos().then(function(data) {
-        photos = getPhotosForGallery(data);
+    photosService.getPhotos().then(function(photos) {
+        photos = getPhotosForGallery(photos.data);
         photosSize = photos.length;
         $scope.photo = photos[getPhotoForFilename($routeParams.filename)];
     });

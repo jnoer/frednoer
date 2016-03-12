@@ -1,3 +1,8 @@
+LOCAL:
+start server: node server
+local url: localhost:5000
+
+HEROKU:
 heroku login
 git push heroku master
 heroku git:remote -a thawing-eyrie-2347   - connect git with app
