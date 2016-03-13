@@ -26,16 +26,18 @@
 
 <div ng-app="frednoer" ng-controller="mainController">
     <div ng-include="'home.html'" controller="home" ng-show="location.path()===''" class="container container-sm">
-        <div ></div>
     </div>
 
     <div ng-include="'drag-racing/drag-racing.html'" controller="home" ng-show="location.path()==='/drag-racing'" class="container container-sm" style="width: 1200px">
     </div>
 
-    <div ng-include="'drag-racing/super-stock/super-stock.html'" controller="home" ng-show="location.path()==='/super-stock'" class="container container-sm" style="width: 1200px">
+    <div ng-include="'drag-racing/super-stock.html'" controller="home" ng-show="location.path()==='/super-stock'" class="container container-sm" style="width: 1200px">
     </div>
 
-    <div ng-show="location.path() !== '' && location.path() !== '/drag-racing' && location.path()!=='/super-stock'" class="container">
+    <div ng-include="'drag-racing/article.html'" controller="home" ng-show="location.path()==='/article'" class="container container-sm" style="width: 1200px">
+    </div>
+
+    <div ng-show="location.path() !== '' && location.path() !== '/drag-racing' && location.path()!=='/super-stock' && location.path()!=='/article'" class="container">
         <div class="row">
             <div ng-include="'nav.html'" class="hidden-xs col-sm-3  sidebar"></div>
 
