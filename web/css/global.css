@@ -127,3 +127,21 @@ a.email:hover
 }
 
 .square {margin-bottom:1px;	height:6px;width:6px;}
+
+
+/*drag racing*/
+.credit {
+    float:right;
+    font-family: Arial;
+    font-size:  8pt;
+}
+
+.read-more {
+    font-family: Arial;
+    font-size:  8pt;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
