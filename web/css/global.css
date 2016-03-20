@@ -137,6 +137,8 @@ a.email:hover
 }
 
 .read-more {
+    float: right;
+    display: inline-block;
     font-family: Arial;
     font-size:  8pt;
 }
