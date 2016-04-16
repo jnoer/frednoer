@@ -2,7 +2,7 @@ String.prototype.endsWith = function(suffix) {
     return this.indexOf(suffix, this.length - suffix.length) !== -1;
 };
 
-var appModule = angular.module('frednoer', ['ngRoute']);
+var appModule = angular.module('frednoer', ['ngRoute', 'ngCookies']);
 
 appModule.constant('INFO', {
     phone: '262-661-4538',
@@ -62,8 +62,33 @@ appModule.service('galleriesService', ['$http', '$q', function($http) {
     }
 }]);
 
-appModule.controller('mainController', ['$scope', '$location', function ($scope, $location) {
+appModule.controller('mainController', ['$scope', '$location', '$cookies', function ($scope, $location, $cookies) {
     $scope.location = $location;
+    var secret='hot-rod';
+    $scope.loggedIn = false;
+    $scope.passwordFailed = false;
+
+    checkLogin = function() {
+        return !!$cookies.get('drag-racing')
+    };
+
+    $scope.submit = function() {
+        if(this.password === secret) {
+            $scope.loggedIn = true;
+            $scope.passwordFailed = false;
+            $cookies.put('drag-racing', 'ok')
+        }
+        else {
+            $scope.passwordFailed = true;
+            $scope.password='';
+        }
+    } ;
+
+    $scope.loggedIn = checkLogin();
+
+    $scope.isDragRacingPath = function() {
+        return $location.path().includes('/drag-racing') || $location.path().includes('article') || $location.path().includes('super-stock');
+    };
 }]);
 
 appModule.controller('galleriesCtrl', ['$scope', 'galleriesService', function ($scope, galleriesService) {
@@ -163,10 +188,6 @@ appModule.controller('navCtrl', ['$scope', '$location', function ($scope, $locat
 
     $scope.isWritingEditingPath = function() {
         return $location.path().endsWith('/writing-editing')
-    };
-
-    $scope.isDragRacingPath = function() {
-        return $location.path().endsWith('/drag-racing');
     };
 
     $scope.isPhotographyPath = function() {

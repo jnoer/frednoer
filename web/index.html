@@ -19,6 +19,7 @@
 
     <script src="javascript/libs/angular.min.js"></script>
     <script src="javascript/libs/angular-route.min.js"></script>
+    <script src="javascript/libs/angular-cookies.min.js"></script>
     <script src="javascript/app.js"></script>
 </HEAD>
 
@@ -28,13 +29,28 @@
     <div ng-include="'home.html'" controller="home" ng-show="location.path()===''" class="container container-sm">
     </div>
 
-    <div ng-include="'drag-racing/drag-racing.html'" controller="home" ng-if="location.path()==='/drag-racing'" class="container container-sm" style="width: 1200px">
+    <div ng-show="isDragRacingPath() && !loggedIn" ng-style="{'padding': '10px'}">
+        <form ng-submit="submit()" controller="mainController">
+            <div>
+                Pasword:
+                <input ng-model="password"></input>
+            </div>
+
+            <div ng-show="passwordFailed">
+                Password is incorrect
+            </div>
+        </form>
     </div>
 
-    <div ng-include="'drag-racing/super-stock.html'" controller="home" ng-if="location.path()==='/super-stock'" class="container container-sm" style="width: 1200px">
-    </div>
+    <div ng-show="loggedIn">
+        <div ng-include="'drag-racing/drag-racing.html'" controller="home" ng-if="location.path()==='/drag-racing'" class="container container-sm" style="width: 1200px">
+        </div>
 
-    <div ng-include="'drag-racing/article.html'" controller="home" ng-if="location.path()==='/article'" class="container container-sm" style="width: 1200px">
+        <div ng-include="'drag-racing/super-stock.html'" controller="home" ng-if="location.path()==='/super-stock'" class="container container-sm" style="width: 1200px">
+        </div>
+
+        <div ng-include="'drag-racing/article.html'" controller="home" ng-if="location.path()==='/article'" class="container container-sm" style="width: 1200px">
+        </div>
     </div>
 
     <div ng-show="location.path() !== '' && location.path() !== '/drag-racing' && location.path()!=='/super-stock' && location.path()!=='/article'" class="container">
