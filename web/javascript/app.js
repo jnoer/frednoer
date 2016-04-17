@@ -64,7 +64,7 @@ appModule.service('galleriesService', ['$http', '$q', function($http) {
 
 appModule.controller('mainController', ['$scope', '$location', '$cookies', function ($scope, $location, $cookies) {
     $scope.location = $location;
-    var secret='hot-rod';
+    var secret='launch';
     $scope.loggedIn = false;
     $scope.passwordFailed = false;
 
