@@ -119,8 +119,8 @@ appModule.controller('photoCtrl', ['$scope', '$routeParams', 'photosService', fu
 
     $scope.gallery = $routeParams.gallery;
 
-    photosService.getPhotos().then(function(photos) {
-        photos = getPhotosForGallery(photos.data);
+    photosService.getPhotos().then(function(photosData) {
+        photos = getPhotosForGallery(photosData.data);
         photosSize = photos.length;
         $scope.photo = photos[getPhotoForFilename($routeParams.filename)];
     });
