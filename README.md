@@ -13,3 +13,4 @@
 * Connect git with the app: **heroku git:remote -a thawing-eyrie-2347**
 * Push changes to heroku: **git push heroku master** (to push to a different branch: **git push heroku bootstrap:master**)
 * Restart the app: **heroku ps:scale web=1**
+                                   
